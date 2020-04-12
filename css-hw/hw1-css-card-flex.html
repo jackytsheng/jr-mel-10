@@ -8,28 +8,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jz-Flex-Card</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af1c2dba04.js" crossorigin="anonymous"></script>
 </head>
 <style>
+    :root {
+        --grey-color: #929292;
+        --dark-grey-color: #8e8f91;
+        --dark-color__active: #363636;
+    }
 
-.card-container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+    body {
+        font-family: 'Baloo Paaji 2', cursive;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    /* allow for hover card animation */
+    .card-holder {
+        width: 300px;
+        height: 430px;
+        margin: 10px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 300px;
+        height: 430px;
+        border-radius: 8px;
+        box-shadow: 1px 1px 2px 2px #ccc;
+    }
+
+    .card:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px #ccc;
+        transition-property: transform, box-shadow;
+        transition-duration: 0.1s;
+        /* border-style:solid;
+    border-color: var(--dark-grey-color); */
+        /* border-width: 1px;
+    border-bottom:none ; */
+    }
+
+    .card-status {
+        display: flex;
+        height: 80px;
+    }
+
+    .card-status-profile-pic {
+        width: 45px;
+    }
+
+    .card-status-profile-container {
+        margin: 15px 15px 10px 10px;
+
+    }
+
+    .card-status-title-date-container {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .card-status-title h3 {
+        line-height: 20px;
+        font-size: 1.1em;
+        margin: 0;
+    }
+
+    .card-status-date p {
+        margin: 0;
+        font-size: 0.9em;
+        color: var(--grey-color);
+    }
+
+    .card-status-setting {
+        position: relative;
+    }
+
+    .three-dot {
+        margin: 0;
+        width: 25px;
+        height: 1px;
+        border: hidden;
+        border-top-style: dotted;
+        border-width: 6px;
+        transform: rotateZ(-90deg) translate(-30px, -5px);
+        border-top-color: var(--dark-grey-color);
+    }
+
+    .three-dot:hover {
+        transition-property: color;
+        border-top-color: var(--dark-color__active);
+        transition-duration: 0.3s;
+    }
+
+    .card-img-container {
+        height: 150px;
+    }
+
+    .card-img {
+        margin-top: 15px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card-description {
+        color: var(--grey-color);
+        margin: 5px 10px 0;
+        height: 165px;
+    }
+
+    .card-bottom {
+        font-size: 1.3em;
+        color: var(--dark-grey-color);
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card-bottom-fill {
+        width: 100px;
+    }
+
+    .clickerable {
+        cursor: pointer;
+    }
+
+    /* a hover shadow effect can be added */
+    .card-bottom-icon-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+    }
+
+    .card-bottom-icon-container a {
+        text-decoration: none;
+        color: var(--grey-color);
+    }
+
+    .card-bottom-icon-container a:visited {
+        text-decoration: none;
+    }
+
+    .card-bottom-like:hover {
+        transform: scale(1.3);
+        color: #d8345f;
+        transition-property: transform, color;
+        transition-duration: 0.3s;
+    }
+
+    .card-bottom-share:hover {
+        transform: scale(1.3);
+        color: #679b9b;
+        transition-property: transform, color;
+        transition-duration: 0.3s;
+
+    }
+
+    .card-bottom-arrow:hover {
+        transform: rotateZ(180deg) scale(1.3);
+        color: var(--dark-color__active);
+        transition-property: transform, color;
+        transition-duration: 0.4s;
+    }
+
+    .card-bottom-github {
+        margin-top: 9px;
+        font-size: 1.2em;
+    }
+
+    .card-bottom-github:hover {
+        transform: scale(1.2);
+        color: #844685;
+        transition-property: transform, color;
+        transition-duration: 0.3s;
+    }
+
+    .card-bottom-twitter {
+        margin-top: 9px;
+        font-size: 1.1em;
+    }
+
+    .card-bottom-twitter:hover {
+        transform: scale(1.2);
+        color: #00bcd4;
+        transition-property: transform, color;
+        transition-duration: 0.3s;
+    }
 
 
-.card{
-    margin:10px;
-    width: 300px;
-    height: 380px;
-    background-color:aquamarine;
-    border-radius: 8px;
-    
-}
 
 
-/* flex-wrap is enough for responsiveness that account for phone and laptop 
+
+
+    /* mobile interactive when scroll, will do this tmr
  @media screen and (max-width:480px) {
     } 
 */
@@ -37,98 +222,205 @@
 
 <body>
     <div class="card-container">
-        <div class="card">
-            <div class="card-status">
-                <!-- 只要一个圆圈的图片 -->
-                <img class="card-status-profile-pic" src="" alt="a profile picture">
-                <div class="card-status-title-date-container">
-                    <div class="card-status-title">
-                        <h3>Lorem ipsum dolor sit.</h3>
+        <div class="card-holder">
+            <div class="card">
+                <div class="card-status">
+                    <div class="card-status-profile-container">
+                        <img class="card-status-profile-pic clickerable"
+                            src="https://ui-avatars.com/api/?name=Jiajin+Zheng&background=be6098&rounded=true&bold=true&color=fff&format=svg"
+                            alt="a profile picture">
                     </div>
-                    <div class="card-status-date">April 11, 2020</div>
+                    <div class="card-status-title-date-container">
+                        <div class="card-status-title">
+                            <h3>Learning to Love HTML</h3>
+                        </div>
+                        <div class="card-status-date">
+                            <p>April 11, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card-status-setting">
+                        <hr class="three-dot clickerable">
+                    </div>
                 </div>
-                <div class="card-status-setting">
-                    <hr class="three-dot">
+                <div class="card-img-container">
+                    <img class="card-img" src="https://www.tutorialrepublic.com/lib/images/html-illustration.png"
+                        alt="html img">
                 </div>
-            </div>
-            <img class="card-img" src="" alt="">
-            <div class="card-description"></div>
-            <div class="card-bottom">
-                <img src="" alt="" class="card-bottom-like">
-                <img src="" alt="" class="card-bottom-share">
+                <div class="card-description">
+                    <p>
+                        HTML stands for HyperText Markup Language. HTML is the basic building block of World Wide Web.
+                    </p>
+                    <!-- its hard to figure out how to show comment in html -->
+                </div>
+                <div class="card-bottom">
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-heart card-bottom-like clickerable"></i></div>
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
+                    <div class="card-bottom-icon-container">
+                        <a href="https://github.com/jackytsheng" target="__blank"><i
+                                class="fab fa-github-alt card-bottom-github"></i></a></div>
+                    <div class="card-bottom-icon-container">
+                        <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
+                                class="fab fa-twitter card-bottom-twitter"></i></a></div>
+                    <span class="card-bottom-fill"></span>
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-status">
-                <!-- 只要一个圆圈的图片 -->
-                <img class="card-status-profile-pic" src="" alt="a profile picture">
-                <div class="card-status-title-date-container">
-                    <div class="card-status-title">
-                        <h3>Lorem ipsum dolor sit.</h3>
+
+        <div class="card-holder">
+            <div class="card">
+                <div class="card-status">
+                    <div class="card-status-profile-container">
+                        <img class="card-status-profile-pic clickerable"
+                            src="https://ui-avatars.com/api/?name=Jiajin+Zheng&background=be6098&rounded=true&bold=true&color=fff&format=svg"
+                            alt="a profile picture">
                     </div>
-                    <div class="card-status-date">April 11, 2020</div>
+                    <div class="card-status-title-date-container">
+                        <div class="card-status-title">
+                            <h3>Polish your web with CSS</h3>
+                        </div>
+                        <div class="card-status-date">
+                            <p>April 12, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card-status-setting">
+                        <hr class="three-dot clickerable">
+                    </div>
                 </div>
-                <div class="card-status-setting">
-                    <hr class="three-dot">
+                <div class="card-img-container">
+                    <img class="card-img" src="https://www.tutorialrepublic.com/lib/images/css-illustration.png"
+                        alt="html img">
                 </div>
-            </div>
-            <img class="card-img" src="" alt="">
-            <div class="card-description"></div>
-            <div class="card-bottom">
-                <img src="" alt="" class="card-bottom-like">
-                <img src="" alt="" class="card-bottom-share">
+                <div class="card-description">
+                    <p>
+                        CSS stands for Cascading Style Sheets. CSS is a standard style sheet language used for
+                        describing the presentation of the web pages.
+                    </p>
+                </div>
+                    <div class="card-bottom">
+                        <div class="card-bottom-icon-container">
+                            <i class="fas fa-heart card-bottom-like clickerable"></i></div>
+                        <div class="card-bottom-icon-container">
+                            <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
+                        <div class="card-bottom-icon-container">
+                            <a href="https://github.com/jackytsheng" target="__blank"><i
+                                    class="fab fa-github-alt card-bottom-github"></i></a></div>
+                        <div class="card-bottom-icon-container">
+                            <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
+                                    class="fab fa-twitter card-bottom-twitter"></i></a></div>
+                        <span class="card-bottom-fill"></span>
+                        <div class="card-bottom-icon-container">
+                            <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
+                        </div>
+                    </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-status">
-                <!-- 只要一个圆圈的图片 -->
-                <img class="card-status-profile-pic" src="" alt="a profile picture">
-                <div class="card-status-title-date-container">
-                    <div class="card-status-title">
-                        <h3>Lorem ipsum dolor sit.</h3>
+        <div class="card-holder">
+            <div class="card">
+                <div class="card-status">
+                    <div class="card-status-profile-container">
+                        <img class="card-status-profile-pic clickerable"
+                            src="https://ui-avatars.com/api/?name=Jiajin+Zheng&background=be6098&rounded=true&bold=true&color=fff&format=svg"
+                            alt="a profile picture">
                     </div>
-                    <div class="card-status-date">April 11, 2020</div>
+                    <div class="card-status-title-date-container">
+                        <div class="card-status-title">
+                            <h3>Js is the new best language</h3>
+                        </div>
+                        <div class="card-status-date">
+                            <p>April 12, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card-status-setting">
+                        <hr class="three-dot clickerable">
+                    </div>
                 </div>
-                <div class="card-status-setting">
-                    <hr class="three-dot">
+                <div class="card-img-container">
+                    <img class="card-img" src="https://www.tutorialrepublic.com/lib/images/javascript-illustration.png"
+                        alt="html img">
                 </div>
-            </div>
-            <img class="card-img" src="" alt="">
-            <div class="card-description"></div>
-            <div class="card-bottom">
-                <img src="" alt="" class="card-bottom-like">
-                <img src="" alt="" class="card-bottom-share">
+                <div class="card-description">
+                    <p>
+                        JavaScript is the most popular and widely used client-side scripting language. Client-side
+                        scripting refers to scripts that run within your web browser.
+                    </p>
+                </div>
+                    <div class="card-bottom">
+                        <div class="card-bottom-icon-container">
+                            <i class="fas fa-heart card-bottom-like clickerable"></i></div>
+                        <div class="card-bottom-icon-container">
+                            <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
+                        <div class="card-bottom-icon-container">
+                            <a href="https://github.com/jackytsheng" target="__blank"><i
+                                    class="fab fa-github-alt card-bottom-github"></i></a></div>
+                        <div class="card-bottom-icon-container">
+                            <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
+                                    class="fab fa-twitter card-bottom-twitter"></i></a></div>
+                        <span class="card-bottom-fill"></span>
+                        <div class="card-bottom-icon-container">
+                            <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
+                        </div>
+                    </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-status">
-                <!-- 只要一个圆圈的图片 -->
-                <img class="card-status-profile-pic" src="" alt="a profile picture">
-                <div class="card-status-title-date-container">
-                    <div class="card-status-title">
-                        <h3>Lorem ipsum dolor sit.</h3>
+        <div class="card-holder">
+            <div class="card">
+                <div class="card-status">
+                    <div class="card-status-profile-container">
+                        <img class="card-status-profile-pic clickerable"
+                            src="https://ui-avatars.com/api/?name=Jiajin+Zheng&background=be6098&rounded=true&bold=true&color=fff&format=svg"
+                            alt="a profile picture">
                     </div>
-                    <div class="card-status-date">April 11, 2020</div>
+                    <div class="card-status-title-date-container">
+                        <div class="card-status-title">
+                            <h3> Checking what you store with SQL</h3>
+                        </div>
+                        <div class="card-status-date">
+                            <p>April 12, 2020</p>
+                        </div>
+                    </div>
+                    <div class="card-status-setting">
+                        <hr class="three-dot clickerable">
+                    </div>
                 </div>
-                <div class="card-status-setting">
-                    <hr class="three-dot">
+                <div class="card-img-container">
+                    <img class="card-img" src="https://www.tutorialrepublic.com/lib/images/sql-illustration.png"
+                        alt="html img">
                 </div>
-            </div>
-            <img class="card-img" src="" alt="">
-            <div class="card-description"></div>
-            <div class="card-bottom">
-                <img src="" alt="" class="card-bottom-like">
-                <img src="" alt="" class="card-bottom-share">
+                <div class="card-description">
+                    <p>
+                        SQL is a standard programming language specifically designed for storing, retrieving, managing
+                        or
+                        manipulating the data inside a RDBMS.
+                    </p>
+                </div>
+                    <div class="card-bottom">
+                        <div class="card-bottom-icon-container">
+                            <i class="fas fa-heart card-bottom-like clickerable"></i></div>
+                        <div class="card-bottom-icon-container">
+                            <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
+                        <div class="card-bottom-icon-container">
+                            <a href="https://github.com/jackytsheng" target="__blank"><i
+                                    class="fab fa-github-alt card-bottom-github"></i></a></div>
+                        <div class="card-bottom-icon-container">
+                            <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
+                                    class="fab fa-twitter card-bottom-twitter"></i></a></div>
+                        <span class="card-bottom-fill"></span>
+                        <div class="card-bottom-icon-container">
+                            <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
-    <!-- read more effect -->
-
-    
-
-
-
 </body>
 
+<script>
+    console.log("觉得这个网页还挺有品味的老铁扣个1!");
+</script>
 
 </html>
