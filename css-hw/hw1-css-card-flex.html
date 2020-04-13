@@ -1,6 +1,6 @@
 <!-- Jiajin Zheng, jacky 
     10.04.2020
-    Because no too many code needed, i will write them all in one file
+    Because not too many codes needed, i will write them all in one file
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jz-Flex-Card</title>
+    <title>Are you tech savy?</title>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/af1c2dba04.js" crossorigin="anonymous"></script>
 </head>
@@ -51,10 +51,6 @@
         box-shadow: 1px 1px #ccc;
         transition-property: transform, box-shadow;
         transition-duration: 0.1s;
-        /* border-style:solid;
-    border-color: var(--dark-grey-color); */
-        /* border-width: 1px;
-    border-bottom:none ; */
     }
 
     .card-status {
@@ -211,13 +207,22 @@
 
 
 
+    /* diable the hover effect for mobile user and for the sake of demostration of my knowledge of @ media query hahah,--Jacky */
 
-
-
-    /* mobile interactive when scroll, will do this tmr
  @media screen and (max-width:480px) {
+    .card {
+    border-style:solid;
+    border-color:#ccc;
+    box-shadow: none;
+    border-width: 1px;
+    }
+    .card:hover {
+    transform: none;
+    box-shadow: none;
+    transition-property: none;
+    transition-duration: none;
+    }
     } 
-*/
 </style>
 
 <body>
@@ -243,8 +248,9 @@
                     </div>
                 </div>
                 <div class="card-img-container">
-                    <img class="card-img" src="https://www.tutorialrepublic.com/lib/images/html-illustration.png"
-                        alt="html img">
+                    <a href="https://www.tutorialrepublic.com/html-tutorial/" target="__blank"><img class="card-img"
+                        src="https://www.tutorialrepublic.com/lib/images/html-illustration.png"
+                        alt="html img"></a>
                 </div>
                 <div class="card-description">
                     <p>
@@ -292,8 +298,9 @@
                     </div>
                 </div>
                 <div class="card-img-container">
-                    <img class="card-img" src="https://www.tutorialrepublic.com/lib/images/css-illustration.png"
-                        alt="html img">
+                     <a href="https://www.tutorialrepublic.com/css-tutorial/" target="__blank"><img class="card-img"
+                             src="https://www.tutorialrepublic.com/lib/images/css-illustration.png"
+                        alt="html img"></a>
                 </div>
                 <div class="card-description">
                     <p>
@@ -303,7 +310,7 @@
                 </div>
                     <div class="card-bottom">
                         <div class="card-bottom-icon-container">
-                            <i class="fas fa-heart card-bottom-like clickerable"></i></div>
+                            <i class="fas fa-heart card-bottom-like clickerable card-bottom-icon"></i></div>
                         <div class="card-bottom-icon-container">
                             <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
                         <div class="card-bottom-icon-container">
@@ -340,8 +347,9 @@
                     </div>
                 </div>
                 <div class="card-img-container">
-                    <img class="card-img" src="https://www.tutorialrepublic.com/lib/images/javascript-illustration.png"
-                        alt="html img">
+                     <a href="https://www.tutorialrepublic.com/javascript-tutorial/" target="__blank"><img class="card-img"
+                             src="https://www.tutorialrepublic.com/lib/images/javascript-illustration.png"
+                        alt="html img"></a>
                 </div>
                 <div class="card-description">
                     <p>
@@ -388,8 +396,9 @@
                     </div>
                 </div>
                 <div class="card-img-container">
-                    <img class="card-img" src="https://www.tutorialrepublic.com/lib/images/sql-illustration.png"
-                        alt="html img">
+                     <a href="https://www.tutorialrepublic.com/sql-tutorial/" target="__blank"><img class="card-img"
+                             src="https://www.tutorialrepublic.com/lib/images/sql-illustration.png"
+                        alt="html img"></a>
                 </div>
                 <div class="card-description">
                     <p>
