@@ -44,8 +44,17 @@
     .homework-collection{
         margin-top: 30px;
         display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .homework-collection h3{
+        margin-left:5px;
+    }
+    .homework-container{
+        display:flex;
     }
     .homework-link-container{
+        margin-right:20px;
         width:80px;
         border-style: solid;
         border-color:#706c61;
@@ -79,18 +88,29 @@
         </div>
         <div class="profile-picture-section">
         <div class="profile-picture-container">
-            <img class="profile-picture" src="/profile-img/coffee-cat.jpeg"
+            <img class="profile-picture" src="profile-img/coffee-cat.jpeg"
                 alt="a picture showing a cat who may love coding that's holding a coffee mug">
         </div>
         </div>
         <div class="homework-collection">
-            <div class="css">
+                <h3>CSS homework</h3>
+                <div class="homework-css homework-container">
                 <div class="hw-css-responsive-flex homework-link-container">
                     <a href="/css-hw/hw1-css-card-flex.html">
                         css-flex</a>
                 </div>
+                <div class="hw-css-responsive-flex homework-link-container">
+                    <a href="#">Pending ...</a>
+                </div>
+                </div>
+                <h3>Javascript homework</h3>
+                <div class="homework-js homework-container">
+                    <div class="hw-js homework-link-container">
+                        <a href="#">Pending...</a>
+                    </div>
+                </div>
             </div>
-        </div>
+            
     </div>
     </div>
 </body>
