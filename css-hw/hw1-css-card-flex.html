@@ -4,6 +4,11 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+<!-- 记得写完代码要format一下，
+    命名不错，就是可以改成用BEM，可以用sass写一遍
+    功能和效果实现了之后可以尝试再把代码再精简一些，用最少的代码实现相同的功能
+    你基础不错，可以开始练习写一些整页的landing page
+-->
 
 <head>
     <meta charset="UTF-8">
@@ -63,6 +68,7 @@
     }
 
     .card-status-profile-container {
+        /* 这个可以直接margin auto */
         margin: 15px 15px 10px 10px;
 
     }
@@ -180,7 +186,7 @@
         transition-property: transform, color;
         transition-duration: 0.4s;
     }
-
+    /* 这个和Twitter的其实可以共用一个class  */
     .card-bottom-github {
         margin-top: 9px;
         font-size: 1.2em;
@@ -209,20 +215,21 @@
 
     /* diable the hover effect for mobile user and for the sake of demostration of my knowledge of @ media query hahah,--Jacky */
 
- @media screen and (max-width:480px) {
-    .card {
-    border-style:solid;
-    border-color:#ccc;
-    box-shadow: none;
-    border-width: 1px;
+    @media screen and (max-width:480px) {
+        .card {
+            border-style: solid;
+            border-color: #ccc;
+            box-shadow: none;
+            border-width: 1px;
+        }
+
+        .card:hover {
+            transform: none;
+            box-shadow: none;
+            transition-property: none;
+            transition-duration: none;
+        }
     }
-    .card:hover {
-    transform: none;
-    box-shadow: none;
-    transition-property: none;
-    transition-duration: none;
-    }
-    } 
 </style>
 
 <body>
@@ -231,6 +238,7 @@
             <div class="card">
                 <div class="card-status">
                     <div class="card-status-profile-container">
+                        <!-- 能不用图片的时候尽量不要用图片，一是不能transparent，二是不好调颜色，这个border radius就可以 -->
                         <img class="card-status-profile-pic clickerable"
                             src="https://ui-avatars.com/api/?name=Jiajin+Zheng&background=be6098&rounded=true&bold=true&color=fff&format=svg"
                             alt="a profile picture">
@@ -249,8 +257,7 @@
                 </div>
                 <div class="card-img-container">
                     <a href="https://www.tutorialrepublic.com/html-tutorial/" target="__blank"><img class="card-img"
-                        src="https://www.tutorialrepublic.com/lib/images/html-illustration.png"
-                        alt="html img"></a>
+                            src="https://www.tutorialrepublic.com/lib/images/html-illustration.png" alt="html img"></a>
                 </div>
                 <div class="card-description">
                     <p>
@@ -298,9 +305,8 @@
                     </div>
                 </div>
                 <div class="card-img-container">
-                     <a href="https://www.tutorialrepublic.com/css-tutorial/" target="__blank"><img class="card-img"
-                             src="https://www.tutorialrepublic.com/lib/images/css-illustration.png"
-                        alt="html img"></a>
+                    <a href="https://www.tutorialrepublic.com/css-tutorial/" target="__blank"><img class="card-img"
+                            src="https://www.tutorialrepublic.com/lib/images/css-illustration.png" alt="html img"></a>
                 </div>
                 <div class="card-description">
                     <p>
@@ -308,22 +314,22 @@
                         describing the presentation of the web pages.
                     </p>
                 </div>
-                    <div class="card-bottom">
-                        <div class="card-bottom-icon-container">
-                            <i class="fas fa-heart card-bottom-like clickerable card-bottom-icon"></i></div>
-                        <div class="card-bottom-icon-container">
-                            <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
-                        <div class="card-bottom-icon-container">
-                            <a href="https://github.com/jackytsheng" target="__blank"><i
-                                    class="fab fa-github-alt card-bottom-github"></i></a></div>
-                        <div class="card-bottom-icon-container">
-                            <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
-                                    class="fab fa-twitter card-bottom-twitter"></i></a></div>
-                        <span class="card-bottom-fill"></span>
-                        <div class="card-bottom-icon-container">
-                            <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
-                        </div>
+                <div class="card-bottom">
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-heart card-bottom-like clickerable card-bottom-icon"></i></div>
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
+                    <div class="card-bottom-icon-container">
+                        <a href="https://github.com/jackytsheng" target="__blank"><i
+                                class="fab fa-github-alt card-bottom-github"></i></a></div>
+                    <div class="card-bottom-icon-container">
+                        <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
+                                class="fab fa-twitter card-bottom-twitter"></i></a></div>
+                    <span class="card-bottom-fill"></span>
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
                     </div>
+                </div>
             </div>
         </div>
         <div class="card-holder">
@@ -347,9 +353,10 @@
                     </div>
                 </div>
                 <div class="card-img-container">
-                     <a href="https://www.tutorialrepublic.com/javascript-tutorial/" target="__blank"><img class="card-img"
-                             src="https://www.tutorialrepublic.com/lib/images/javascript-illustration.png"
-                        alt="html img"></a>
+                    <a href="https://www.tutorialrepublic.com/javascript-tutorial/" target="__blank"><img
+                            class="card-img"
+                            src="https://www.tutorialrepublic.com/lib/images/javascript-illustration.png"
+                            alt="html img"></a>
                 </div>
                 <div class="card-description">
                     <p>
@@ -357,22 +364,22 @@
                         scripting refers to scripts that run within your web browser.
                     </p>
                 </div>
-                    <div class="card-bottom">
-                        <div class="card-bottom-icon-container">
-                            <i class="fas fa-heart card-bottom-like clickerable"></i></div>
-                        <div class="card-bottom-icon-container">
-                            <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
-                        <div class="card-bottom-icon-container">
-                            <a href="https://github.com/jackytsheng" target="__blank"><i
-                                    class="fab fa-github-alt card-bottom-github"></i></a></div>
-                        <div class="card-bottom-icon-container">
-                            <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
-                                    class="fab fa-twitter card-bottom-twitter"></i></a></div>
-                        <span class="card-bottom-fill"></span>
-                        <div class="card-bottom-icon-container">
-                            <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
-                        </div>
+                <div class="card-bottom">
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-heart card-bottom-like clickerable"></i></div>
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
+                    <div class="card-bottom-icon-container">
+                        <a href="https://github.com/jackytsheng" target="__blank"><i
+                                class="fab fa-github-alt card-bottom-github"></i></a></div>
+                    <div class="card-bottom-icon-container">
+                        <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
+                                class="fab fa-twitter card-bottom-twitter"></i></a></div>
+                    <span class="card-bottom-fill"></span>
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
                     </div>
+                </div>
             </div>
         </div>
         <div class="card-holder">
@@ -396,9 +403,8 @@
                     </div>
                 </div>
                 <div class="card-img-container">
-                     <a href="https://www.tutorialrepublic.com/sql-tutorial/" target="__blank"><img class="card-img"
-                             src="https://www.tutorialrepublic.com/lib/images/sql-illustration.png"
-                        alt="html img"></a>
+                    <a href="https://www.tutorialrepublic.com/sql-tutorial/" target="__blank"><img class="card-img"
+                            src="https://www.tutorialrepublic.com/lib/images/sql-illustration.png" alt="html img"></a>
                 </div>
                 <div class="card-description">
                     <p>
@@ -407,22 +413,22 @@
                         manipulating the data inside a RDBMS.
                     </p>
                 </div>
-                    <div class="card-bottom">
-                        <div class="card-bottom-icon-container">
-                            <i class="fas fa-heart card-bottom-like clickerable"></i></div>
-                        <div class="card-bottom-icon-container">
-                            <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
-                        <div class="card-bottom-icon-container">
-                            <a href="https://github.com/jackytsheng" target="__blank"><i
-                                    class="fab fa-github-alt card-bottom-github"></i></a></div>
-                        <div class="card-bottom-icon-container">
-                            <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
-                                    class="fab fa-twitter card-bottom-twitter"></i></a></div>
-                        <span class="card-bottom-fill"></span>
-                        <div class="card-bottom-icon-container">
-                            <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
-                        </div>
+                <div class="card-bottom">
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-heart card-bottom-like clickerable"></i></div>
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-share-alt card-bottom-share clickerable"></i> </div>
+                    <div class="card-bottom-icon-container">
+                        <a href="https://github.com/jackytsheng" target="__blank"><i
+                                class="fab fa-github-alt card-bottom-github"></i></a></div>
+                    <div class="card-bottom-icon-container">
+                        <a href="https://twitter.com/Jiajin_Zheng" target="__blank"> <i
+                                class="fab fa-twitter card-bottom-twitter"></i></a></div>
+                    <span class="card-bottom-fill"></span>
+                    <div class="card-bottom-icon-container">
+                        <i class="fas fa-chevron-up card-bottom-arrow clickerable"></i>
                     </div>
+                </div>
             </div>
         </div>
     </div>
