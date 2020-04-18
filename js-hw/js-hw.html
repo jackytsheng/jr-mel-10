@@ -24,7 +24,7 @@
 </body>
 
 <script>
-    flightStop = (array) => array.length==1?"direct": array.length==2?"1 stop":`${array.length} stops`
+    flightStop = (array) => array.length==1?"direct": array.length==2?"1 stop":`${array.length -1} stops`
     taxCal=(money)=>{
         if(money<=18200){
             return 0;
