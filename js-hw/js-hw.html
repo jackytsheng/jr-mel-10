@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js homework</title>
+</head>
+<body>
+    <p>
+    Q1 call "flightstop() " in the console
+    </p>
+    <p>
+    Q2 call "taxCal() " in the console
+    </p>
+</body>
+
+<script>
+    flightStop = (array) => array.length==1?"direct": array.length==2?"1 stop":`${array.length} stops`
+    taxCal=(money)=>{
+        if(money<18200){
+            return 0;
+        }else if (money<37000){
+            return (money - 18201)*0.19;
+        }else if (money<90000){ 
+            return (money - 37001)*0.325+3572;
+        }else if (money<180000){ 
+            return (money - 90001)*0.37+20797;
+        }else if (money>180001){ 
+            return (money - 180001)*0.45+54096;
+        }
+    }
+</script>
+</html>
