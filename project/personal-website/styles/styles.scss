@@ -1,0 +1,55 @@
+@import '_variable';
+$cardWidth:1032px;
+$cardHeight:564px;
+$navHeight:100px;
+
+@import url("http://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,700,700i|Montserrat:300,400,500,600,700");
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: 'Roboto',Helvetica,sans-serif;
+    
+}
+
+.main__wrapper{
+
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+}
+.nav__container {
+    height:$navHeight;
+    width:$cardWidth;
+    background: red;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__container{
+
+
+    .card{
+        height:$cardHeight;
+        width:$cardWidth;
+        border: solid 1px black;
+        background-color: blue;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        &__title {
+            height:400px;
+            background-color: green;
+        }
+          .card__body {
+              
+              background-color: white;
+          }
+    }
+  
+}
