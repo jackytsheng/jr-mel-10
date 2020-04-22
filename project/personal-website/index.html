@@ -5,20 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jacky Zheng</title>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji+2:400,600,700,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://kit.fontawesome.com/af1c2dba04.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="img/JZ-favicon.ico" sizes="16x16">
 </head>
 
 <body>
   <div class="main__wrapper">
   <nav class="nav">
     <div class="nav__container">
-    <div class="nav__name">Jacky Zheng</div>
+    <div class="nav__name">Jacky <span class="highlight">Zheng</span></div>
     <div class="nav__content">
-      <button class="nav__content__home">Home</button>
-      <button class="nav__content__resume">Resume</button>
-      <button class="nav__content__services">Services</button>
-      <button class="nav__content__blog">Blog</button>
-      <button class="nav__content__contact">Contact</button>
+      <a class="nav__content__link nav__content__home nav__content__link--selected" href="#">Home</a>
+      <a class="nav__content__link nav__content__resume" href="#">Resume</a>
+      <a class="nav__content__link nav__content__services" href="#">Services</a>
+      <a class="nav__content__link nav__content__blog" href="#">Blog</a>
+      <a class="nav__content__link nav__content__contact" href="#">Contact</a>
     </div>
     </div>
   </nav>
@@ -26,30 +29,50 @@
   <div class="card">
     <header class="card__title">
       <figure class="card__title__img">
-        <img src="" alt="">
+        <img src="img/MyselfShirt.svg" alt="">
       </figure>
       <div class="card__title__name__container">
-        <div class="card__title__name__container__name"></div>
-        <div class="card__title__name__container__position"></div>
+        <div class="card__title__name__container__name">
+          <h1>Jacky Zheng</h1>
+        </div>
+        <div class="card__title__name__container__position">Frontend developer</div>
         <div class="card__title__name__container__socialIcon">
-
+          <i class="fab fa-twitter-square card__title__name__container--icon"></i>
+          <i class="fab fa-linkedin card__title__name__container--icon"></i>
+          <i class="fab fa-facebook-square card__title__name__container--icon"></i>
         </div>
       </div>
     </header>
     <main class="card__body">
       <article class="card__body__aboutMe">
         <h2 class="card__body__aboutMe__title">
-
+          About <span class="highlight">Me</span>
         </h2>
-        <p class="card__body__aboutMe__description"></p>
+        <p class="card__body__aboutMe__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum ad laborum, libero nisi, sequi enim perferendis maxime rem ullam aspernatur corporis.</p>
       </article>
       <div class="card__body__info">
         <ul class="card__body__info__list">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li class="card__body__info__list__container"> 
+            <span class="info__key">Age</span>
+            <span class="info__value">24</span>
+          </li>
+          <li class="card__body__info__list__container">
+            <span class="info__key">Residence</span>
+            <span class="info__value">Australia</span>
+          </li>
+          <li class="card__body__info__list__container">
+            <span class="info__key">e-mail</span>
+            <span class="info__value"><a>jackytsheng@gmail.com<a></span>
+          </li>
+          <li class="card__body__info__list__container">
+            <span class="info__key">Phone</span>
+            <span class="info__value">+61 400 000 000</span>
+          </li>
+          <li class="card__body__info__list__container">
+            <span class="info__key">Address</span>
+            <span class="info__value">123 Great ayaya st </span>
+          </li>
+
         </ul>
       </div>
 

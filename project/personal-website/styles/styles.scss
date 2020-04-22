@@ -1,55 +1,184 @@
 @import '_variable';
-$cardWidth:1032px;
-$cardHeight:564px;
-$navHeight:100px;
 
-@import url("http://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,700,700i|Montserrat:300,400,500,600,700");
 
-*{
-    box-sizing: border-box;
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-    text-align: center;
-    font-family: 'Roboto',Helvetica,sans-serif;
-    
+  text-align: center;
+  font-family: 'Baloo Paaji 2',
+    cursive;
+  color: $darkColor;
+  margin: 0;
+  background-image: url("https://www.ignitesearch.com.au/wp-content/themes/the-seo/images/network.png");
+  background-size: cover;
+  background-color: $bodyBackground;
+  background-position: center;
 }
 
-.main__wrapper{
 
-    display: flex;
-    flex-direction: column;;
-    align-items: center;
-}
-.nav__container {
-    height:$navHeight;
-    width:$cardWidth;
-    background: red;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+p {
+  line-height: 25px;
 }
 
-.card__container{
+.highlight {
+  color: $lightText;
+}
 
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    .card{
-        height:$cardHeight;
-        width:$cardWidth;
-        border: solid 1px black;
-        background-color: blue;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        &__title {
-            height:400px;
-            background-color: green;
+  .nav {
+    &__content {
+      &__link {
+        margin: 0 5px;
+        font-size: 1.1em;
+        text-decoration: none;
+        color: $darkColor;
+        opacity: $OpacityLight;
+        border-bottom: solid 2px $lightText;
+
+        &--selected {
+          font-weight: 600;
+          opacity: 1;
         }
-          .card__body {
-              
-              background-color: white;
-          }
+
+        &:hover {
+          color: $lightText;
+        }
+      }
     }
-  
+  }
+}
+
+.nav__container {
+  height: $navHeight;
+  width: $cardWidth;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav__name {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+}
+
+.card__container {
+  .card {
+    width: $cardWidth;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px 3px #ccc;
+
+    &__title {
+      height: 300px;
+      padding: 50px;
+      margin-bottom: 25px;
+      background-color: $cardTitleBackground;
+      background-image: url("https://i.ya-webdesign.com/images/png-transparent-patterns.png");
+      display: flex;
+
+      &__img {
+        margin: 0;
+        background-color: $darkColor;
+        width: 274px;
+        height: 274px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-property: transform box-shadow;
+        transition-duration:0.3s;
+        &:hover{
+          transform: translateY(-10px);
+          box-shadow: 0 20px 20px -5px #ccc;
+        }
+        & img {
+          width: 268px;
+          position: relative;
+        }
+      }
+
+      &__name__container {
+        display: flex;
+        margin:0 auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        &__name {
+          h1 {
+            font-size: 54px;
+            margin: 30px 0 0;
+            font-weight: 600;
+            line-height: 81px;
+          }
+        }
+        &__position{
+          font-size: 1.2em;
+        }
+        &--icon{
+          font-size:2em;
+          margin:5px;
+          transition-property: transform box-shadow;
+          transition-duration:0.3s;
+          &:hover{
+            transform:translateY(-3px);
+            box-shadow: 0 3px 10px -3px #ccc;
+            cursor: pointer;
+          }
+
+        }
+
+      }
+    }
+
+  .card__body {
+    padding: 20px 50px 50px;
+    background-color: white;
+    display: flex;
+    text-align: left;
+
+    &__aboutMe {
+      width: 450px;
+
+      &__description {
+        opacity: $OpacityLight;
+      }
+    }
+
+    &__info ul li {
+      list-style-type: none;
+      margin: 8px 0;
+    }
+
+    .info__key {
+      display: inline-block;
+      width: 120px;
+    }
+
+    .info__value {
+      opacity: $OpacityHeavy;
+      a{
+        text-decoration: none;
+        color:$cardTitleBackground;
+        &:hover{
+          color:$lightText;
+          cursor: pointer;
+          transition: color 0.4s ease-in;
+        }
+      }
+    }
+  }
+}
+
 }
