@@ -35,13 +35,28 @@ p {
           align-items: center;
 }
 
+.main__wrapper .nav__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__wrapper .nav__content__link__container:hover .nav__content__link::after {
+  left: 0;
+  right: 0;
+}
+
+.main__wrapper .nav__content__link__container:hover .nav__content__link {
+  opacity: 1;
+}
+
 .main__wrapper .nav__content__link {
-  margin: 0 5px;
+  margin: 0 10px;
   font-size: 1.1em;
   text-decoration: none;
   color: #364f6b;
   opacity: 0.8;
-  border-bottom: solid 2px #fc5185;
+  position: relative;
 }
 
 .main__wrapper .nav__content__link--selected {
@@ -49,11 +64,21 @@ p {
   opacity: 1;
 }
 
-.main__wrapper .nav__content__link:hover {
-  color: #fc5185;
+.main__wrapper .nav__content__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  border-bottom: solid 2px #fc5185;
+  -webkit-transition-property: left,right;
+  transition-property: left,right;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
-.nav__container {
+.main__wrapper .nav .nav__container {
   height: 100px;
   width: 1032px;
   display: -webkit-box;
@@ -67,12 +92,12 @@ p {
           align-items: center;
 }
 
-.nav__container .nav__name {
+.main__wrapper .nav .nav__container .nav__name {
   font-size: 1.5em;
   font-weight: 600;
 }
 
-.card__container .card {
+.main__wrapper .card__container .card {
   width: 1032px;
   background-color: white;
   border-radius: 10px;
@@ -88,7 +113,7 @@ p {
           box-shadow: 5px 5px 15px 3px #ccc;
 }
 
-.card__container .card__title {
+.main__wrapper .card__container .card__title {
   height: 300px;
   padding: 50px;
   margin-bottom: 25px;
@@ -99,7 +124,7 @@ p {
   display: flex;
 }
 
-.card__container .card__title__img {
+.main__wrapper .card__container .card__title__img {
   margin: 0;
   background-color: #364f6b;
   width: 274px;
@@ -122,19 +147,19 @@ p {
           transition-duration: 0.3s;
 }
 
-.card__container .card__title__img:hover {
+.main__wrapper .card__container .card__title__img:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
   -webkit-box-shadow: 0 20px 20px -5px #ccc;
           box-shadow: 0 20px 20px -5px #ccc;
 }
 
-.card__container .card__title__img img {
+.main__wrapper .card__container .card__title__img img {
   width: 268px;
   position: relative;
 }
 
-.card__container .card__title__name__container {
+.main__wrapper .card__container .card__title__name__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,18 +177,18 @@ p {
   color: white;
 }
 
-.card__container .card__title__name__container__name h1 {
+.main__wrapper .card__container .card__title__name__container__name h1 {
   font-size: 54px;
   margin: 30px 0 0;
   font-weight: 600;
   line-height: 81px;
 }
 
-.card__container .card__title__name__container__position {
+.main__wrapper .card__container .card__title__name__container__position {
   font-size: 1.2em;
 }
 
-.card__container .card__title__name__container--icon {
+.main__wrapper .card__container .card__title__name__container--icon {
   font-size: 2em;
   margin: 5px;
   -webkit-transition-property: -webkit-transform box-shadow;
@@ -174,7 +199,7 @@ p {
           transition-duration: 0.3s;
 }
 
-.card__container .card__title__name__container--icon:hover {
+.main__wrapper .card__container .card__title__name__container--icon:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
   -webkit-box-shadow: 0 3px 10px -3px #ccc;
@@ -182,7 +207,7 @@ p {
   cursor: pointer;
 }
 
-.card__container .card .card__body {
+.main__wrapper .card__container .card .card__body {
   padding: 20px 50px 50px;
   background-color: white;
   display: -webkit-box;
@@ -191,34 +216,34 @@ p {
   text-align: left;
 }
 
-.card__container .card .card__body__aboutMe {
+.main__wrapper .card__container .card .card__body__aboutMe {
   width: 450px;
 }
 
-.card__container .card .card__body__aboutMe__description {
+.main__wrapper .card__container .card .card__body__aboutMe__description {
   opacity: 0.8;
 }
 
-.card__container .card .card__body__info ul li {
+.main__wrapper .card__container .card .card__body__info ul li {
   list-style-type: none;
   margin: 8px 0;
 }
 
-.card__container .card .card__body .info__key {
+.main__wrapper .card__container .card .card__body .info__key {
   display: inline-block;
   width: 120px;
 }
 
-.card__container .card .card__body .info__value {
+.main__wrapper .card__container .card .card__body .info__value {
   opacity: 0.7;
 }
 
-.card__container .card .card__body .info__value a {
+.main__wrapper .card__container .card .card__body .info__value a {
   text-decoration: none;
   color: #3fc1c9;
 }
 
-.card__container .card .card__body .info__value a:hover {
+.main__wrapper .card__container .card .card__body .info__value a:hover {
   color: #fc5185;
   cursor: pointer;
   -webkit-transition: color 0.4s ease-in;
