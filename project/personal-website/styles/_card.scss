@@ -1,0 +1,185 @@
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .nav {
+        position: sticky;
+        top: 0;
+
+        &__content {
+            display: flex;
+
+            &__link__container:hover .nav__content__link::after {
+                left: 0;
+                right: 0;
+            }
+
+            &__link__container:hover .nav__content__link {
+                opacity: 1;
+            }
+
+            &__link {
+                margin: 0 10px;
+                font-size: 1.1em;
+                text-decoration: none;
+                color: $darkColor;
+                opacity: $OpacityLight;
+                position: relative;
+
+                &--selected {
+                    font-weight: 600;
+                    opacity: 1;
+                }
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    right: 50%;
+                    bottom: 0;
+                    border-bottom: solid 2px $lightText;
+                    transition-property: left, right;
+                    transition-duration: 0.4s;
+                }
+            }
+        }
+
+        .nav__container {
+            height: $navHeight;
+            width: $cardWidth;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav__name {
+                font-size: 1.5em;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .card__container {
+        .card {
+            width: $cardWidth;
+            background-color: white;
+            border-radius: $radius;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 5px 5px 15px 3px #ccc;
+
+            &__title {
+                height: 300px;
+                padding: 50px;
+                margin-bottom: 25px;
+                background-color: $ThemeBackground;
+                background-image: url("https://i.ya-webdesign.com/images/png-transparent-patterns.png");
+                display: flex;
+
+                &__img {
+                    margin: 0;
+                    background-color: $darkColor;
+                    width: 274px;
+                    height: 274px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition-property: transform box-shadow;
+                    transition-duration: 0.3s;
+
+                    &:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 20px 20px -5px #ccc;
+                    }
+
+                    & img {
+                        width: 268px;
+                        position: relative;
+                    }
+                }
+
+                &__name__container {
+                    display: flex;
+                    margin: 0 auto;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+
+                    &__name {
+                        h1 {
+                            font-size: 54px;
+                            margin: 30px 0 0;
+                            font-weight: 600;
+                            line-height: 81px;
+                        }
+                    }
+
+                    &__position {
+                        font-size: 1.2em;
+                    }
+
+                    &--icon {
+                        font-size: 2em;
+                        margin: 5px;
+                        transition-property: transform box-shadow;
+                        transition-duration: 0.3s;
+
+                        &:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 0 3px 10px -3px #ccc;
+                            cursor: pointer;
+                        }
+
+                    }
+
+                }
+            }
+
+            .card__body {
+                padding: 20px 50px 50px;
+                background-color: white;
+                display: flex;
+                text-align: left;
+
+                &__aboutMe {
+                    width: 450px;
+
+                    &__description {
+                        opacity: $OpacityLight;
+                    }
+                }
+
+                &__info ul li {
+                    list-style-type: none;
+                    margin: 8px 0;
+                }
+
+                .info__key {
+                    display: inline-block;
+                    width: 120px;
+                }
+
+                .info__value {
+                    opacity: $OpacityHeavy;
+
+                    a {
+                        text-decoration: none;
+                        color: $ThemeBackground;
+
+                        &:hover {
+                            color: $lightText;
+                            cursor: pointer;
+                            transition: color 0.4s ease-in;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
