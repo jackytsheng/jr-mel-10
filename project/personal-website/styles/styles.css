@@ -12,9 +12,13 @@
 }
 
 .main__wrapper .nav {
+  top: 0;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
 }
 
 .main__wrapper .nav__content {
@@ -61,7 +65,7 @@
 }
 
 .main__wrapper .nav .nav__container {
-  height: 100px;
+  height: 60px;
   width: 1032px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,6 +81,16 @@
 .main__wrapper .nav .nav__container .nav__name {
   font-size: 1.5em;
   font-weight: 600;
+}
+
+.main__wrapper .nav-sticky {
+  background-color: white;
+  z-index: 100;
+  margin: auto;
+}
+
+.main__wrapper .card__container {
+  margin-top: 40px;
 }
 
 .main__wrapper .card__container .card {
@@ -263,7 +277,7 @@
 }
 
 .Resume__page .Resume__body {
-  padding: 30px 50px 50px;
+  padding: 30px 50px 20px;
   text-align: left;
   background-color: white;
   display: -webkit-box;
@@ -379,12 +393,119 @@
 }
 
 .Resume__page .Resume__skills {
+  padding: 0 50px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  background-color: white;
+  text-align: left;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design,
+.Resume__page .Resume__skills .Resume__skills__coding {
+  padding-left: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .skill__title,
+.Resume__page .Resume__skills .Resume__skills__coding .skill__title {
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .skill__bar__wrapper,
+.Resume__page .Resume__skills .Resume__skills__coding .skill__bar__wrapper {
+  position: relative;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .skill__bar,
+.Resume__page .Resume__skills .Resume__skills__coding .skill__bar {
+  width: 100%;
+  height: 10px;
+  border: solid 1px #e0e0e0;
+  background-color: #f5f5f5;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .skill__bar::after,
+.Resume__page .Resume__skills .Resume__skills__coding .skill__bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3fc1c9;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .design--web::after,
+.Resume__page .Resume__skills .Resume__skills__coding .design--web::after {
+  right: 20%;
+  -webkit-animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .design--graphic::after,
+.Resume__page .Resume__skills .Resume__skills__coding .design--graphic::after {
+  right: 60%;
+  -webkit-animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .design--print::after,
+.Resume__page .Resume__skills .Resume__skills__coding .design--print::after {
+  right: 30%;
+  -webkit-animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .coding--html::after,
+.Resume__page .Resume__skills .Resume__skills__coding .coding--html::after {
+  right: 15%;
+  -webkit-animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .coding--css::after,
+.Resume__page .Resume__skills .Resume__skills__coding .coding--css::after {
+  right: 10%;
+  -webkit-animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .coding--js::after,
+.Resume__page .Resume__skills .Resume__skills__coding .coding--js::after {
+  right: 20%;
+  -webkit-animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s;
+}
+
+.Resume__page .Resume__skills .Resume__skills__design .skill__bar--last-div,
+.Resume__page .Resume__skills .Resume__skills__coding .skill__bar--last-div {
+  margin-bottom: 30px;
+}
+
+@-webkit-keyframes bar-animation {
+  0% {
+    right: 100%;
+  }
+  50% {
+    right: 100%;
+  }
+  100% {
+  }
+}
+
+@keyframes bar-animation {
+  0% {
+    right: 100%;
+  }
+  50% {
+    right: 100%;
+  }
+  100% {
+  }
 }
 
 * {
