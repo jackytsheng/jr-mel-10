@@ -30,25 +30,68 @@
     justify-content: center;
     .Education__container,.Experience__container{
       padding: 0 15px;
-      position: relative;
+      &__title{
+        font-weight: 400;
+      }
       .Education__container__holder,.Experience__container__holder{
         margin: 0 0 20px 20px;
         padding: 15px 20px 10px;
         border-left:solid 2px $ThemeBackground;
         box-shadow: 0 0 3px 1px #ccc;
-
-        &::before{
+        position: relative;
+        .circle__and__bar::before {
           content:"";
           position: absolute;
-          width:13px;
+          left:-29px;
+          top:60px;
+          width:29px;
           border-top: solid 2px $ThemeBackground;
+        }
+        .circle__and__bar::after{
+          @include theme-border;
+          content: "";
+          display:block;
+          width:12px;
+          height:12px;
+          border-radius: 50%;
+          position: absolute;
+          left:-31px;
+          background-color:white;
+          top:53px;
         }
         &:hover{
           box-shadow: 0 0 10px 1px #ccc;
         }
+        .course__name,.position__name{
+          font-size: 16px;
+          margin: 0;
+        }
         .course__date__and__info,
         .position__date__and__info{
           display:flex;
+          p{
+            margin:0px;
+            margin-bottom:8px;
+            font-size: 13px;
+            line-height: 14px;
+            margin-right: 2px;
+          }
+          .date{
+            color: $ThemeBackground;
+          }
+          .company{
+            padding-left: 8px;
+            border-left: solid $grayBar 1px ;
+            color: $grayText;
+            margin-left: 5px;
+          }
+          
+        }
+        .course__description,
+        .position__description {
+          margin: 0;
+          margin-bottom: 10px;
+
         }
       }
     }

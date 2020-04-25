@@ -276,7 +276,10 @@
 
 .Resume__page .Resume__body .Education__container, .Resume__page .Resume__body .Experience__container {
   padding: 0 15px;
-  position: relative;
+}
+
+.Resume__page .Resume__body .Education__container__title, .Resume__page .Resume__body .Experience__container__title {
+  font-weight: 400;
 }
 
 .Resume__page .Resume__body .Education__container .Education__container__holder, .Resume__page .Resume__body .Education__container .Experience__container__holder, .Resume__page .Resume__body .Experience__container .Education__container__holder, .Resume__page .Resume__body .Experience__container .Experience__container__holder {
@@ -285,18 +288,39 @@
   border-left: solid 2px #3fc1c9;
   -webkit-box-shadow: 0 0 3px 1px #ccc;
           box-shadow: 0 0 3px 1px #ccc;
+  position: relative;
 }
 
-.Resume__page .Resume__body .Education__container .Education__container__holder::before, .Resume__page .Resume__body .Education__container .Experience__container__holder::before, .Resume__page .Resume__body .Experience__container .Education__container__holder::before, .Resume__page .Resume__body .Experience__container .Experience__container__holder::before {
+.Resume__page .Resume__body .Education__container .Education__container__holder .circle__and__bar::before, .Resume__page .Resume__body .Education__container .Experience__container__holder .circle__and__bar::before, .Resume__page .Resume__body .Experience__container .Education__container__holder .circle__and__bar::before, .Resume__page .Resume__body .Experience__container .Experience__container__holder .circle__and__bar::before {
   content: "";
   position: absolute;
-  width: 13px;
+  left: -29px;
+  top: 60px;
+  width: 29px;
   border-top: solid 2px #3fc1c9;
+}
+
+.Resume__page .Resume__body .Education__container .Education__container__holder .circle__and__bar::after, .Resume__page .Resume__body .Education__container .Experience__container__holder .circle__and__bar::after, .Resume__page .Resume__body .Experience__container .Education__container__holder .circle__and__bar::after, .Resume__page .Resume__body .Experience__container .Experience__container__holder .circle__and__bar::after {
+  border: solid 2px #3fc1c9;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: -31px;
+  background-color: white;
+  top: 53px;
 }
 
 .Resume__page .Resume__body .Education__container .Education__container__holder:hover, .Resume__page .Resume__body .Education__container .Experience__container__holder:hover, .Resume__page .Resume__body .Experience__container .Education__container__holder:hover, .Resume__page .Resume__body .Experience__container .Experience__container__holder:hover {
   -webkit-box-shadow: 0 0 10px 1px #ccc;
           box-shadow: 0 0 10px 1px #ccc;
+}
+
+.Resume__page .Resume__body .Education__container .Education__container__holder .course__name, .Resume__page .Resume__body .Education__container .Education__container__holder .position__name, .Resume__page .Resume__body .Education__container .Experience__container__holder .course__name, .Resume__page .Resume__body .Education__container .Experience__container__holder .position__name, .Resume__page .Resume__body .Experience__container .Education__container__holder .course__name, .Resume__page .Resume__body .Experience__container .Education__container__holder .position__name, .Resume__page .Resume__body .Experience__container .Experience__container__holder .course__name, .Resume__page .Resume__body .Experience__container .Experience__container__holder .position__name {
+  font-size: 16px;
+  margin: 0;
 }
 
 .Resume__page .Resume__body .Education__container .Education__container__holder .course__date__and__info,
@@ -307,6 +331,46 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.Resume__page .Resume__body .Education__container .Education__container__holder .course__date__and__info p,
+.Resume__page .Resume__body .Education__container .Education__container__holder .position__date__and__info p, .Resume__page .Resume__body .Education__container .Experience__container__holder .course__date__and__info p,
+.Resume__page .Resume__body .Education__container .Experience__container__holder .position__date__and__info p, .Resume__page .Resume__body .Experience__container .Education__container__holder .course__date__and__info p,
+.Resume__page .Resume__body .Experience__container .Education__container__holder .position__date__and__info p, .Resume__page .Resume__body .Experience__container .Experience__container__holder .course__date__and__info p,
+.Resume__page .Resume__body .Experience__container .Experience__container__holder .position__date__and__info p {
+  margin: 0px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 14px;
+  margin-right: 2px;
+}
+
+.Resume__page .Resume__body .Education__container .Education__container__holder .course__date__and__info .date,
+.Resume__page .Resume__body .Education__container .Education__container__holder .position__date__and__info .date, .Resume__page .Resume__body .Education__container .Experience__container__holder .course__date__and__info .date,
+.Resume__page .Resume__body .Education__container .Experience__container__holder .position__date__and__info .date, .Resume__page .Resume__body .Experience__container .Education__container__holder .course__date__and__info .date,
+.Resume__page .Resume__body .Experience__container .Education__container__holder .position__date__and__info .date, .Resume__page .Resume__body .Experience__container .Experience__container__holder .course__date__and__info .date,
+.Resume__page .Resume__body .Experience__container .Experience__container__holder .position__date__and__info .date {
+  color: #3fc1c9;
+}
+
+.Resume__page .Resume__body .Education__container .Education__container__holder .course__date__and__info .company,
+.Resume__page .Resume__body .Education__container .Education__container__holder .position__date__and__info .company, .Resume__page .Resume__body .Education__container .Experience__container__holder .course__date__and__info .company,
+.Resume__page .Resume__body .Education__container .Experience__container__holder .position__date__and__info .company, .Resume__page .Resume__body .Experience__container .Education__container__holder .course__date__and__info .company,
+.Resume__page .Resume__body .Experience__container .Education__container__holder .position__date__and__info .company, .Resume__page .Resume__body .Experience__container .Experience__container__holder .course__date__and__info .company,
+.Resume__page .Resume__body .Experience__container .Experience__container__holder .position__date__and__info .company {
+  padding-left: 8px;
+  border-left: solid #e0e0e0 1px;
+  color: #5a6979;
+  margin-left: 5px;
+}
+
+.Resume__page .Resume__body .Education__container .Education__container__holder .course__description,
+.Resume__page .Resume__body .Education__container .Education__container__holder .position__description, .Resume__page .Resume__body .Education__container .Experience__container__holder .course__description,
+.Resume__page .Resume__body .Education__container .Experience__container__holder .position__description, .Resume__page .Resume__body .Experience__container .Education__container__holder .course__description,
+.Resume__page .Resume__body .Experience__container .Education__container__holder .position__description, .Resume__page .Resume__body .Experience__container .Experience__container__holder .course__description,
+.Resume__page .Resume__body .Experience__container .Experience__container__holder .position__description {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .Resume__page .Resume__body .content__holder {
