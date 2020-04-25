@@ -276,6 +276,7 @@
 
 .Resume__page .Resume__body .Education__container, .Resume__page .Resume__body .Experience__container {
   padding: 0 15px;
+  position: relative;
 }
 
 .Resume__page .Resume__body .Education__container .Education__container__holder, .Resume__page .Resume__body .Education__container .Experience__container__holder, .Resume__page .Resume__body .Experience__container .Education__container__holder, .Resume__page .Resume__body .Experience__container .Experience__container__holder {
@@ -288,11 +289,24 @@
 
 .Resume__page .Resume__body .Education__container .Education__container__holder::before, .Resume__page .Resume__body .Education__container .Experience__container__holder::before, .Resume__page .Resume__body .Experience__container .Education__container__holder::before, .Resume__page .Resume__body .Experience__container .Experience__container__holder::before {
   content: "";
+  position: absolute;
+  width: 13px;
+  border-top: solid 2px #3fc1c9;
 }
 
 .Resume__page .Resume__body .Education__container .Education__container__holder:hover, .Resume__page .Resume__body .Education__container .Experience__container__holder:hover, .Resume__page .Resume__body .Experience__container .Education__container__holder:hover, .Resume__page .Resume__body .Experience__container .Experience__container__holder:hover {
   -webkit-box-shadow: 0 0 10px 1px #ccc;
           box-shadow: 0 0 10px 1px #ccc;
+}
+
+.Resume__page .Resume__body .Education__container .Education__container__holder .course__date__and__info,
+.Resume__page .Resume__body .Education__container .Education__container__holder .position__date__and__info, .Resume__page .Resume__body .Education__container .Experience__container__holder .course__date__and__info,
+.Resume__page .Resume__body .Education__container .Experience__container__holder .position__date__and__info, .Resume__page .Resume__body .Experience__container .Education__container__holder .course__date__and__info,
+.Resume__page .Resume__body .Experience__container .Education__container__holder .position__date__and__info, .Resume__page .Resume__body .Experience__container .Experience__container__holder .course__date__and__info,
+.Resume__page .Resume__body .Experience__container .Experience__container__holder .position__date__and__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .Resume__page .Resume__body .content__holder {

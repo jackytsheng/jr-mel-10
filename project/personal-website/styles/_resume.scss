@@ -30,16 +30,25 @@
     justify-content: center;
     .Education__container,.Experience__container{
       padding: 0 15px;
+      position: relative;
       .Education__container__holder,.Experience__container__holder{
         margin: 0 0 20px 20px;
         padding: 15px 20px 10px;
         border-left:solid 2px $ThemeBackground;
         box-shadow: 0 0 3px 1px #ccc;
+
         &::before{
           content:"";
+          position: absolute;
+          width:13px;
+          border-top: solid 2px $ThemeBackground;
         }
         &:hover{
           box-shadow: 0 0 10px 1px #ccc;
+        }
+        .course__date__and__info,
+        .position__date__and__info{
+          display:flex;
         }
       }
     }
