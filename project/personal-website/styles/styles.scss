@@ -3,6 +3,7 @@
 @import 'navbar';
 @import 'card';
 @import 'resume';
+@import 'contact';
 
 * {
   box-sizing: border-box;
@@ -33,3 +34,11 @@ h2{
   color: $lightText;
 }
 
+
+.bottom__footer{
+  padding:20px;
+  p{
+    font-size: 13px;
+    color:$grayText;
+  }
+}

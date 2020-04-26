@@ -2,3 +2,9 @@
     border: solid 2px $ThemeBackground;
 }
 
+@mixin page-setup{
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    width: $cardWidth;
+}

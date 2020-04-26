@@ -1,26 +1,29 @@
-.Resume__page {
-  display: flex;
-  flex-direction: column;
-  display: inline-block;
-  width: $cardWidth;
+.title__page {
+  background-color: $ThemeBackground;
+  background-image: url("https://i.ya-webdesign.com/images/png-transparent-patterns.png");
+  background-position-y: -20px;
+  background-size: cover;
+  color: white;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  padding: 30px;
 
-  .Resume__title {
-    background-color: $ThemeBackground;
-    background-image: url("https://i.ya-webdesign.com/images/png-transparent-patterns.png");
-    background-position-y: -20px;
-    background-size: cover;
-    color: white;
-    border-top-left-radius: $radius;
-    border-top-right-radius: $radius;
-    padding: 30px;
-
-    h1 {
-      font-size: 50px;
-      font-weight: 600;
-      line-height: 66px;
-      margin: 0;
-    }
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 66px;
+    margin: 0;
   }
+}
+.heading {
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+
+.Resume__page {
+  @include page-setup;
+  box-shadow: 5px 5px 15px 3px #ccc;
 
   .Resume__body {
     padding: 30px 50px 20px;
@@ -28,6 +31,7 @@
     background-color: white;
     display: flex;
     justify-content: center;
+
     .Education__container,.Experience__container{
       padding: 0 15px;
       &__title{
@@ -95,6 +99,9 @@
         }
       }
     }
+    .Education__container{
+      padding-left: 0;
+    }
     .content__holder {
       padding: 15px 0;
       border-left: solid 2px $grayBar;
@@ -109,12 +116,10 @@
     .Resume__skills__coding{
       padding-left: 15px;
       flex:1; 
-      .skill__title{
-        font-weight: 400;
-        margin-bottom:25px;
-      }
+
       .skill__bar__wrapper{
         position: relative;
+        padding-right:15px;
       }
       .skill__bar{
         width:100%;
@@ -171,6 +176,9 @@
         margin-bottom:30px;
       }
       
+    }
+    .Resume__skills__design{
+      padding-left: 0;
     }
 
   }

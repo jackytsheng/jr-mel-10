@@ -12,6 +12,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100px;
 }
 
 .nav__content {
@@ -79,7 +80,8 @@
 .nav-sticky {
   background-color: white;
   z-index: 100;
-  margin: auto;
+  margin-bottom: 40px;
+  height: 60px;
 }
 
 .main__wrapper {
@@ -93,88 +95,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.main__wrapper .nav {
-  top: 0;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-.main__wrapper .nav__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.main__wrapper .nav__content__link__container:hover .nav__content__link::after {
-  left: 0;
-  right: 0;
-}
-
-.main__wrapper .nav__content__link__container:hover .nav__content__link {
-  opacity: 1;
-}
-
-.main__wrapper .nav__content__link {
-  margin: 0 10px;
-  font-size: 1.1em;
-  text-decoration: none;
-  color: #364f6b;
-  opacity: 0.8;
-  position: relative;
-}
-
-.main__wrapper .nav__content__link--selected {
-  font-weight: 600;
-  opacity: 1;
-}
-
-.main__wrapper .nav__content__link::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  border-bottom: solid 2px #fc5185;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-.main__wrapper .nav .nav__container {
-  height: 60px;
-  width: 1032px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.main__wrapper .nav .nav__container .nav__name {
-  font-size: 1.5em;
-  font-weight: 600;
-}
-
-.main__wrapper .nav-sticky {
-  background-color: white;
-  z-index: 100;
-  margin: auto;
-}
-
-.main__wrapper .card__container {
-  margin-top: 40px;
 }
 
 .main__wrapper .card__container .card {
@@ -330,19 +250,7 @@
   transition: color 0.4s ease-in;
 }
 
-.Resume__page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: inline-block;
-  width: 1032px;
-}
-
-.Resume__page .Resume__title {
+.title__page {
   background-color: #3fc1c9;
   background-image: url("https://i.ya-webdesign.com/images/png-transparent-patterns.png");
   background-position-y: -20px;
@@ -353,11 +261,30 @@
   padding: 30px;
 }
 
-.Resume__page .Resume__title h1 {
+.title__page h1 {
   font-size: 50px;
   font-weight: 600;
   line-height: 66px;
   margin: 0;
+}
+
+.heading {
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.Resume__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: inline-block;
+  width: 1032px;
+  -webkit-box-shadow: 5px 5px 15px 3px #ccc;
+          box-shadow: 5px 5px 15px 3px #ccc;
 }
 
 .Resume__page .Resume__body {
@@ -471,6 +398,10 @@
   margin-bottom: 10px;
 }
 
+.Resume__page .Resume__body .Education__container {
+  padding-left: 0;
+}
+
 .Resume__page .Resume__body .content__holder {
   padding: 15px 0;
   border-left: solid 2px #e0e0e0;
@@ -493,15 +424,10 @@
           flex: 1;
 }
 
-.Resume__page .Resume__skills .Resume__skills__design .skill__title,
-.Resume__page .Resume__skills .Resume__skills__coding .skill__title {
-  font-weight: 400;
-  margin-bottom: 25px;
-}
-
 .Resume__page .Resume__skills .Resume__skills__design .skill__bar__wrapper,
 .Resume__page .Resume__skills .Resume__skills__coding .skill__bar__wrapper {
   position: relative;
+  padding-right: 15px;
 }
 
 .Resume__page .Resume__skills .Resume__skills__design .skill__bar,
@@ -570,6 +496,10 @@
   margin-bottom: 30px;
 }
 
+.Resume__page .Resume__skills .Resume__skills__design {
+  padding-left: 0;
+}
+
 @-webkit-keyframes bar-animation {
   0% {
     right: 100%;
@@ -590,6 +520,98 @@
   }
   100% {
   }
+}
+
+.contact__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: inline-block;
+  width: 1032px;
+  -webkit-box-shadow: 5px 5px 15px 3px #ccc;
+          box-shadow: 5px 5px 15px 3px #ccc;
+}
+
+.page__content {
+  text-align: left;
+  padding: 30px 50px 50px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*icon color #bdbdbd;*/
+}
+
+.page__content .contact__info, .page__content .contact__form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.page__content .contact__info {
+  padding-left: 0;
+}
+
+.page__content .contact__form {
+  padding-left: 15px;
+}
+
+.page__content .info__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 10px 10px 0;
+}
+
+.page__content .info__detail .icon__container {
+  background-color: #fafafa;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page__content .info__detail p {
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 14px;
+  font-weight: 600;
+}
+
+.page__content .info-icon {
+  color: #3fc1c9;
+}
+
+.page__content .input__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 1px #e0e0e0;
+}
+
+.page__content .input__bar .square__container {
+  background-color: #fafafa;
+  height: 41px;
+  width: 40px;
+  position: relative;
+}
+
+.page__content .input__bar input {
+  height: 41px;
+  width: 100%;
+  border: none;
 }
 
 * {
@@ -622,5 +644,14 @@ h2 {
 
 .highlight {
   color: #fc5185;
+}
+
+.bottom__footer {
+  padding: 20px;
+}
+
+.bottom__footer p {
+  font-size: 13px;
+  color: #5a6979;
 }
 /*# sourceMappingURL=styles.css.map */

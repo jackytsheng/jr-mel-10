@@ -5,6 +5,7 @@
     position: sticky;
     display:flex;
     justify-content: center;
+    height:100px;
     &__content {
         display: flex;
         &__link__container:hover .nav__content__link::after {
@@ -61,5 +62,6 @@
 .nav-sticky {
     background-color: white;
     z-index: 100;
-    margin: auto;
+    margin-bottom: 40px;
+    height:60px;
 }
