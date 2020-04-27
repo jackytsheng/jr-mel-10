@@ -1,8 +1,10 @@
 
-
 .contact__page {
   @include page-setup;
   box-shadow: 5px 5px 15px 3px #ccc;
+  overflow: hidden;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
 }
 .page__content{
   text-align: left;
@@ -44,18 +46,90 @@
   .input__bar{
     display:flex;
     border-bottom:solid 1px #e0e0e0;
-    .square__container{
-      background-color: #fafafa;
-
-      height:41px;
-      width:40px;
-      position: relative;
+    margin-bottom: 25px;
+    position:relative;
+    &::after {
+      position: absolute;
+      content: "";
+      transition-property: left,right;
+      transition-duration: 0.2s;
+      left: 50%;
+      right: 50%;
+      bottom: -1px;
+      border-bottom: solid 2px black;
     }
     input{
       height:41px;
       width:100%;
       border:none;
+      
     }
+
+
   }
-/*icon color #bdbdbd;*/
+}
+.input__message{
+    height: 97px;
+    display:flex;
+textarea {
+    resize: none;
+    flex:1;
+    border:none;
+  }
+
+}
+
+.square__container {
+  background-color: #fafafa;
+  height: 41px;
+  width: 40px;
+}
+.message__icon-holder {
+  padding-top: 10px;
+  background-color: #fafafa;
+  width: 40px;
+}
+
+.icon-holder{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.message__icon-holder{
+  align-items: flex-start;
+}
+.g-recaptcha{
+  margin-bottom: 20px;
+}
+.submit-btn{
+  padding: 0 21px;
+  background-color: $ThemeBackground;
+  color: white;
+  font-size: 12px;
+  box-shadow: 1px 2px 3px 1px #ccc;
+  width:144px;
+  height:39px;
+  border-radius: 3px;
+  border:none;
+  font-weight: 600;
+  &:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 8px 2px #ccc;
+  }
+}
+
+.contact-icon {
+  color: #bdbdbd;
+}
+.info__heading{
+  position:absolute;
+  left:40px;
+  top:6px;
+  font-style: normal;
+  font-size: 16px;
+  color:#bdbdbd;
+  transition-property: transform, font-size;
+  transition-duration: 0.2s;
+  cursor: text;
 }
