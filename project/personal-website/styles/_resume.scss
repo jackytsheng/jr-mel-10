@@ -22,8 +22,7 @@
 .Resume__page {
   @include page-setup;
   overflow: hidden;
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
+  border-radius: $radius;
   box-shadow: 5px 5px 15px 3px #ccc;
 
   .Resume__body {
@@ -113,6 +112,7 @@
     display:flex;
     background-color: white;
     text-align: left;
+
     .Resume__skills__design,
     .Resume__skills__coding{
       padding-left: 15px;

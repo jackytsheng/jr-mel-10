@@ -282,8 +282,7 @@
   display: inline-block;
   width: 1032px;
   overflow: hidden;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   -webkit-box-shadow: 5px 5px 15px 3px #ccc;
           box-shadow: 5px 5px 15px 3px #ccc;
 }
@@ -536,8 +535,7 @@
   -webkit-box-shadow: 5px 5px 15px 3px #ccc;
           box-shadow: 5px 5px 15px 3px #ccc;
   overflow: hidden;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 
 .page__content {
@@ -606,7 +604,7 @@
   position: relative;
 }
 
-.page__content .input__bar::after {
+.page__content .input__bar .underline__focus {
   position: absolute;
   content: "";
   -webkit-transition-property: left,right;
@@ -616,13 +614,14 @@
   left: 50%;
   right: 50%;
   bottom: -1px;
-  border-bottom: solid 2px black;
+  border-bottom: solid 2px #3fc1c9;
 }
 
 .page__content .input__bar input {
   height: 41px;
   width: 100%;
   border: none;
+  font-size: 20px;
 }
 
 .input__message {
@@ -638,6 +637,7 @@
       -ms-flex: 1;
           flex: 1;
   border: none;
+  font-size: 20px;
 }
 
 .square__container {
@@ -647,7 +647,7 @@
 }
 
 .message__icon-holder {
-  padding-top: 10px;
+  padding-top: 15px;
   background-color: #fafafa;
   width: 40px;
 }
@@ -712,6 +712,10 @@
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   cursor: text;
+}
+
+.info__message {
+  top: 9px;
 }
 
 * {
