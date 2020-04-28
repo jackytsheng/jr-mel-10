@@ -140,37 +140,37 @@
       .design--web {
         &::after {
           right: 20%;
-          animation: bar-animation 0.8s ;
+          animation: bar-animation 0.8s 1s;
         }
       }
       .design--graphic {
         &::after {
           right: 60%;
-         animation: bar-animation 0.8s;
+         animation: bar-animation 0.8s 1s;
         }
       }
       .design--print{
         &::after{
           right:30%;
-          animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s 1s;
         }
       }
       .coding--html {
         &::after {
           right: 15%;
-          animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s 1s;
         }
       }
       .coding--css {
         &::after {
           right: 10%;
-          animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s 1s;
         }
       }
       .coding--js {
         &::after {
           right: 20%;
-          animation: bar-animation 0.8s;
+          animation: bar-animation 0.8s 1s;
         }
       }
       .skill__bar--last-div{

@@ -452,43 +452,43 @@
 .Resume__page .Resume__skills .Resume__skills__design .design--web::after,
 .Resume__page .Resume__skills .Resume__skills__coding .design--web::after {
   right: 20%;
-  -webkit-animation: bar-animation 0.8s;
-          animation: bar-animation 0.8s;
+  -webkit-animation: bar-animation 0.8s 1s;
+          animation: bar-animation 0.8s 1s;
 }
 
 .Resume__page .Resume__skills .Resume__skills__design .design--graphic::after,
 .Resume__page .Resume__skills .Resume__skills__coding .design--graphic::after {
   right: 60%;
-  -webkit-animation: bar-animation 0.8s;
-          animation: bar-animation 0.8s;
+  -webkit-animation: bar-animation 0.8s 1s;
+          animation: bar-animation 0.8s 1s;
 }
 
 .Resume__page .Resume__skills .Resume__skills__design .design--print::after,
 .Resume__page .Resume__skills .Resume__skills__coding .design--print::after {
   right: 30%;
-  -webkit-animation: bar-animation 0.8s;
-          animation: bar-animation 0.8s;
+  -webkit-animation: bar-animation 0.8s 1s;
+          animation: bar-animation 0.8s 1s;
 }
 
 .Resume__page .Resume__skills .Resume__skills__design .coding--html::after,
 .Resume__page .Resume__skills .Resume__skills__coding .coding--html::after {
   right: 15%;
-  -webkit-animation: bar-animation 0.8s;
-          animation: bar-animation 0.8s;
+  -webkit-animation: bar-animation 0.8s 1s;
+          animation: bar-animation 0.8s 1s;
 }
 
 .Resume__page .Resume__skills .Resume__skills__design .coding--css::after,
 .Resume__page .Resume__skills .Resume__skills__coding .coding--css::after {
   right: 10%;
-  -webkit-animation: bar-animation 0.8s;
-          animation: bar-animation 0.8s;
+  -webkit-animation: bar-animation 0.8s 1s;
+          animation: bar-animation 0.8s 1s;
 }
 
 .Resume__page .Resume__skills .Resume__skills__design .coding--js::after,
 .Resume__page .Resume__skills .Resume__skills__coding .coding--js::after {
   right: 20%;
-  -webkit-animation: bar-animation 0.8s;
-          animation: bar-animation 0.8s;
+  -webkit-animation: bar-animation 0.8s 1s;
+          animation: bar-animation 0.8s 1s;
 }
 
 .Resume__page .Resume__skills .Resume__skills__design .skill__bar--last-div,
