@@ -12,7 +12,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100px;
 }
 
 .nav__content {
@@ -44,6 +43,11 @@
   opacity: 1;
 }
 
+.nav__content__link--selected::after {
+  left: 0 !important;
+  right: 0 !important;
+}
+
 .nav__content__link::after {
   content: "";
   position: absolute;
@@ -60,6 +64,7 @@
 
 .nav .nav__container {
   height: 60px;
+  margin-bottom: 40px;
   width: 1032px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,6 +75,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
 }
 
 .nav .nav__container .nav__name {
@@ -79,8 +86,8 @@
 
 .nav-sticky {
   background-color: white;
-  z-index: 100;
   margin-bottom: 40px;
+  z-index: 100;
   height: 60px;
 }
 
@@ -95,6 +102,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.main__wrapper:hover .card__container {
+  -webkit-transform: rotateY(-90deg) translateY(200px);
+          transform: rotateY(-90deg) translateY(200px);
+  -webkit-transform-origin: 50% 50% -600px;
+          transform-origin: 50% 50% -600px;
+}
+
+.main__wrapper .card__container {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .main__wrapper .card__container .card {
@@ -724,6 +748,7 @@
 }
 
 body {
+  position: relative;
   text-align: center;
   font-family: 'Baloo Paaji 2',cursive;
   color: #364f6b;
