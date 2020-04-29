@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="styles/styles.css">
   <script src="https://kit.fontawesome.com/af1c2dba04.js" crossorigin="anonymous"></script>
   <link rel="icon" href="img/JZ-favicon.ico" sizes="16x16">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
 </head>
 
 
@@ -29,281 +35,326 @@
     </div>
   </div>
 </nav>
+
 <body>
-  <section class="Home__page main__wrapper">
-    <div class="card__container">
-      <div class="card">
-        <header class="card__title">
-          <figure class="card__title__img">
-            <img src="img/MyselfShirt.svg" alt="">
-          </figure>
-          <div class="card__title__name__container">
-            <div class="card__title__name__container__name">
-              <h1>Jacky Zheng</h1>
-            </div>
-            <div class="card__title__name__container__position">Frontend developer</div>
-            <div class="card__title__name__container__socialIcon">
-              <i class="fab fa-twitter-square card__title__name__container--icon"></i>
-              <i class="fab fa-linkedin card__title__name__container--icon"></i>
-              <i class="fab fa-facebook-square card__title__name__container--icon"></i>
-            </div>
-          </div>
-        </header>
-        <main class="card__body">
-          <article class="card__body__aboutMe">
-            <h2 class="card__body__aboutMe__title">
-              About <span class="highlight">Me</span>
-            </h2>
-            <p class="card__body__aboutMe__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Nostrum ad laborum, libero nisi, sequi enim perferendis maxime rem ullam aspernatur corporis.</p>
-          </article>
-          <div class="card__body__info">
-            <ul class="card__body__info__list">
-              <li class="card__body__info__list__container">
-                <span class="info__key">Age</span>
-                <span class="info__value">24</span>
-              </li>
-              <li class="card__body__info__list__container">
-                <span class="info__key">Residence</span>
-                <span class="info__value">Australia</span>
-              </li>
-              <li class="card__body__info__list__container">
-                <span class="info__key">e-mail</span>
-                <span class="info__value"><a>jackytsheng@gmail.com</a></span>
-              </li>
-              <li class="card__body__info__list__container">
-                <span class="info__key">Phone</span>
-                <span class="info__value">+61 400 000 000</span>
-              </li>
-              <li class="card__body__info__list__container">
-                <span class="info__key">Address</span>
-                <span class="info__value">123 Great ayaya st </span>
-              </li>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <section class="Home__page main__wrapper swiper-slide">
+        <div class="card__container">
+          <div class="card">
+            <header class="card__title">
+              <figure class="card__title__img">
+                <img src="img/MyselfShirt.svg" alt="">
+              </figure>
+              <div class="card__title__name__container">
+                <div class="card__title__name__container__name">
+                  <h1>Jacky Zheng</h1>
+                </div>
+                <div class="card__title__name__container__position">Frontend developer</div>
+                <div class="card__title__name__container__socialIcon">
+                  <i class="fab fa-twitter-square card__title__name__container--icon"></i>
+                  <i class="fab fa-linkedin card__title__name__container--icon"></i>
+                  <i class="fab fa-facebook-square card__title__name__container--icon"></i>
+                </div>
+              </div>
+            </header>
+            <main class="card__body">
+              <article class="card__body__aboutMe">
+                <h2 class="card__body__aboutMe__title">
+                  About <span class="highlight">Me</span>
+                </h2>
+                <p class="card__body__aboutMe__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Nostrum ad laborum, libero nisi, sequi enim perferendis maxime rem ullam aspernatur corporis.</p>
+              </article>
+              <div class="card__body__info">
+                <ul class="card__body__info__list">
+                  <li class="card__body__info__list__container">
+                    <span class="info__key">Age</span>
+                    <span class="info__value">24</span>
+                  </li>
+                  <li class="card__body__info__list__container">
+                    <span class="info__key">Residence</span>
+                    <span class="info__value">Australia</span>
+                  </li>
+                  <li class="card__body__info__list__container">
+                    <span class="info__key">e-mail</span>
+                    <span class="info__value"><a>jackytsheng@gmail.com</a></span>
+                  </li>
+                  <li class="card__body__info__list__container">
+                    <span class="info__key">Phone</span>
+                    <span class="info__value">+61 400 000 000</span>
+                  </li>
+                  <li class="card__body__info__list__container">
+                    <span class="info__key">Address</span>
+                    <span class="info__value">123 Great ayaya st </span>
+                  </li>
 
-            </ul>
-          </div>
+                </ul>
+              </div>
 
-        </main>
-      </div>
+            </main>
+          </div>
+        </div>
+      </section>
+      <section class="main__wrapper swiper-slide">
+        <div class="Resume__page">
+          <header class="title__page">
+            <h1 class="Title">Resume</h1>
+          </header>
+          <main class="Resume__body">
+            <div class="Education__container">
+              <h2 class="Education__container__title">Education</h2>
+              <div class="content__holder">
+                <div class="Education__container__holder">
+                  <div class="circle__and__bar"></div>
+                  <h3 class="course__name">Specialisation Course</h3>
+                  <div class="course__date__and__info">
+                    <p class="date">
+                      2020
+                    </p>
+                    <p class="company">Apple inc.</p>
+                  </div>
+                  <p class="course__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in
+                    quibusdam
+                    inventore.</p>
+
+                </div>
+                <div class="Education__container__holder">
+                  <div class="circle__and__bar"></div>
+                  <h3 class="course__name">Specialisation Course</h3>
+                  <div class="course__date__and__info">
+                    <p class="date">
+                      2020
+                    </p>
+                    <p class="company">Apple inc.</p>
+                  </div>
+                  <p class="course__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in
+                    quibusdam
+                    inventore.</p>
+
+                </div>
+                <div class="Education__container__holder">
+                  <div class="circle__and__bar"></div>
+                  <h3 class="course__name">Specialisation Course</h3>
+                  <div class="course__date__and__info">
+                    <p class="date">
+                      2020
+                    </p>
+                    <p class="company">Apple inc.</p>
+                  </div>
+                  <p class="course__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in
+                    quibusdam
+                    inventore.</p>
+                </div>
+              </div>
+            </div>
+            <div class="Experience__container">
+              <h2 class="Experience__container__title">Experience</h2>
+              <div class="content__holder">
+                <div class="Experience__container__holder">
+                  <div class="circle__and__bar"></div>
+                  <h3 class="position__name">Frontend-developer</h3>
+                  <div class="position__date__and__info">
+                    <p class="date">
+                      Dec 2019 - Current
+                    </p>
+                    <p class="company">Apple inc.</p>
+                  </div>
+                  <p class="position__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in
+                    quibusdam
+                    inventore.</p>
+
+                </div>
+                <div class="Experience__container__holder">
+                  <div class="circle__and__bar"></div>
+                  <h3 class="position__name">Backend-developer</h3>
+                  <div class="position__date__and__info">
+                    <p class="date">
+                      Dec 2018 - Dec 2019
+                    </p>
+                    <p class="company">Apple inc.</p>
+                  </div>
+                  <p class="position__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in
+                    quibusdam
+                    inventore.</p>
+
+                </div>
+                <div class="Experience__container__holder">
+                  <div class="circle__and__bar"></div>
+                  <h3 class="position__name">DevOp</h3>
+                  <div class="position__date__and__info">
+                    <p class="date">
+                      Dec 2017 - Dec 2018
+                    </p>
+                    <p class="company">Apple inc.</p>
+                  </div>
+                  <p class="position__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in
+                    quibusdam
+                    inventore.</p>
+
+                </div>
+              </div>
+            </div>
+          </main>
+          <footer class="Resume__skills">
+            <div class="Resume__skills__design">
+              <h2 class="heading">Design <span class="highlight">Skills</span></h2>
+              <div class="Resume__skills__design__holder">
+                <div class="skills__design--web skills--animation">Web Design</div>
+                <div class="skill__bar__wrapper">
+                  <div class="skill__bar design--web">
+                    <span class="skill__bar--mask"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="Resume__skills__design__holder">
+                <div class="skills__design--graphic skills--animation">Graphic Design</div>
+                <div class="skill__bar__wrapper">
+                  <div class="skill__bar design--graphic">
+                    <span class="skill__bar--mask"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="Resume__skills__design__holder">
+                <div class="skills__design--print skills--animation">Print Design</div>
+                <div class="skill__bar__wrapper">
+                  <div class="skill__bar skill__bar--last-div design--print">
+                    <span class="skill__bar--mask"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Resume__skills__coding">
+              <h2 class="heading">Coding <span class="highlight">Skills</span></h2>
+              <div class="Resume__skills__coding__holder">
+                <div class="skills__coding--html skills--animation">HTML5</div>
+                <div class="skill__bar__wrapper">
+                  <div class="skill__bar coding--html">
+                    <span class="skill__bar--mask"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="Resume__skills__coding__holder">
+                <div class="skills__coding--css skills--animation">CSS3/LESS/SASS</div>
+                <div class="skill__bar__wrapper">
+                  <div class="skill__bar coding--css">
+                    <span class="skill__bar--mask"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="Resume__skills__coding__holder">
+                <div class="skills__coding--js skills--animation">Javascript</div>
+                <div class="skill__bar__wrapper">
+                  <div class="skill__bar skill__bar--last-div coding--js">
+                    <span class="skill__bar--mask"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </section>
+      <section class="main__wrapper swiper-slide">
+        <div class="contact__page">
+          <header class="title__page">
+            <h1 class="Title">Contact</h1>
+          </header>
+          <main class="page__content">
+            <div class="contact__info">
+              <h2 class="heading">Get in <span class="highlight">Touch</span></h2>
+              <iframe width="451" height="200" frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJSyUHXNRC1moRbf8lt-Jjy-o&key=AIzaSyCO_ZRzs_5cZ63Etv5FLDk5tXC4tKuamt0"
+                allowfullscreen></iframe>
+              <div class="info__detail">
+                <div class="icon__container">
+                  <i class="fas fa-map-marker-alt info-icon"></i></div>
+                <p class="detail"> Melbourne, Australia
+                </p>
+              </div>
+              <div class="info__detail">
+                <div class="icon__container">
+                  <i class="fas fa-envelope info-icon"></i></div>
+                <p class="detail">jackytsheng@gmail.com
+                </p>
+              </div>
+              <div class="info__detail">
+                <div class="icon__container">
+                  <i class="fas fa-phone info-icon"></i></div>
+                <p class="detail">+61 400 000 000
+                </p>
+              </div>
+              <div class="info__detail">
+                <div class="icon__container">
+                  <i class="fas fa-check info-icon"></i></div>
+                <p class="detail">Freelance Available
+                </p>
+              </div>
+            </div>
+            <div class="contact__form">
+              <h2 class="heading">Contact <span class="highlight">Form</span></h2>
+
+              <head>
+                <title>reCAPTCHA demo: Simple page</title>
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+              </head>
+              <form action="?" method="POST" id="contactForm">
+                <div class="input__bar">
+                  <span class="underline__focus"></span>
+                  <div class="square__container icon-holder"><i class="fas fa-user contact-icon"></i></div>
+                  <label for="full-name"><i class="info__heading info__Name">Full Name</i></label>
+                  <input id="full-name" type="text" required>
+                </div>
+                <div class="input__bar">
+                  <span class="underline__focus"></span>
+                  <div class="square__container icon-holder"><i class="fas fa-envelope contact-icon email__icon"></i>
+                  </div>
+                  <label for="email"><i class="info__heading info__email">Email Address</i></label>
+                  <input id="email" type="email" required>
+                </div>
+                <div class="input__message input__bar">
+                  <span class="underline__focus"></span>
+                  <div class="message__icon-holder icon-holder"><i
+                      class="fas fa-comment contact-icon message__icon"></i></div>
+                  <label for="contactMessages"><i class="info__heading info__message">Messages</i></label>
+                  <textarea name="message" id="contactMessages" cols="auto" rows="10" form="contactForm"></textarea>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LfOiu4UAAAAAMF8IeuVgPXKEp44CjlFEOSuvnuh"></div>
+                <button class="submit-btn" type="submit">SEND MESSAGE</button>
+              </form>
+            </div>
+          </main>
+        </div>
+      </section>
     </div>
-  </section>
-  <section class="main__wrapper">
-    <div class="Resume__page">
-    <header class="title__page">
-      <h1 class="Title">Resume</h1>
-    </header>
-    <main class="Resume__body">
-      <div class="Education__container">
-        <h2 class="Education__container__title">Education</h2>
-        <div class="content__holder">
-          <div class="Education__container__holder">
-            <div class="circle__and__bar"></div>
-            <h3 class="course__name">Specialisation Course</h3>
-            <div class="course__date__and__info">
-              <p class="date">
-                2020
-              </p>
-              <p class="company">Apple inc.</p>
-            </div>
-            <p class="course__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in quibusdam
-              inventore.</p>
-
-          </div>
-          <div class="Education__container__holder">
-            <div class="circle__and__bar"></div>
-            <h3 class="course__name">Specialisation Course</h3>
-            <div class="course__date__and__info">
-              <p class="date">
-                2020
-              </p>
-              <p class="company">Apple inc.</p>
-            </div>
-            <p class="course__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in quibusdam
-              inventore.</p>
-
-          </div>
-          <div class="Education__container__holder">
-            <div class="circle__and__bar"></div>
-            <h3 class="course__name">Specialisation Course</h3>
-            <div class="course__date__and__info">
-              <p class="date">
-                2020
-              </p>
-              <p class="company">Apple inc.</p>
-            </div>
-            <p class="course__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in quibusdam
-              inventore.</p>
-          </div>
-        </div>
-      </div>
-      <div class="Experience__container">
-        <h2 class="Experience__container__title">Experience</h2>
-        <div class="content__holder">
-          <div class="Experience__container__holder">
-            <div class="circle__and__bar"></div>
-            <h3 class="position__name">Frontend-developer</h3>
-            <div class="position__date__and__info">
-              <p class="date">
-                Dec 2019 - Current
-              </p>
-              <p class="company">Apple inc.</p>
-            </div>
-            <p class="position__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in quibusdam
-              inventore.</p>
-
-          </div>
-          <div class="Experience__container__holder">
-            <div class="circle__and__bar"></div>
-            <h3 class="position__name">Backend-developer</h3>
-            <div class="position__date__and__info">
-              <p class="date">
-                Dec 2018 - Dec 2019
-              </p>
-              <p class="company">Apple inc.</p>
-            </div>
-            <p class="position__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in quibusdam
-              inventore.</p>
-
-          </div>
-          <div class="Experience__container__holder">
-            <div class="circle__and__bar"></div>
-            <h3 class="position__name">DevOp</h3>
-            <div class="position__date__and__info">
-              <p class="date">
-                Dec 2017 - Dec 2018
-              </p>
-              <p class="company">Apple inc.</p>
-            </div>
-            <p class="position__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At in quibusdam
-              inventore.</p>
-
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer class="Resume__skills">
-      <div class="Resume__skills__design">
-        <h2 class="heading">Design <span class="highlight">Skills</span></h2>
-        <div class="Resume__skills__design__holder">
-          <div class="skills__design--web">Web Design</div>
-          <div class="skill__bar__wrapper">
-            <div class="skill__bar design--web"></div>
-          </div>
-        </div>
-        <div class="Resume__skills__design__holder">
-          <div class="skills__design--graphic">Graphic Design</div>
-          <div class="skill__bar__wrapper">
-            <div class="skill__bar design--graphic"></div>
-          </div>
-        </div>
-        <div class="Resume__skills__design__holder">
-          <div class="skills__design--print">Print Design</div>
-          <div class="skill__bar__wrapper">
-            <div class="skill__bar skill__bar--last-div design--print"></div>
-          </div>
-        </div>
-      </div>
-        <div class="Resume__skills__coding">
-          <h2 class="heading">Coding <span class="highlight">Skills</span></h2>
-          <div class="Resume__skills__coding__holder">
-            <div class="skills__coding--html">HTML5</div>
-            <div class="skill__bar__wrapper">
-              <div class="skill__bar coding--html"></div>
-            </div>
-          </div>
-          <div class="Resume__skills__coding__holder">
-            <div class="skills__coding--css ">CSS3/LESS/SASS</div>
-            <div class="skill__bar__wrapper">
-              <div class="skill__bar coding--css"></div>
-            </div>
-          </div>
-          <div class="Resume__skills__coding__holder">
-            <div class="skills__coding--js">Javascript</div>
-            <div class="skill__bar__wrapper">
-              <div class="skill__bar skill__bar--last-div coding--js"></div>
-            </div>
-          </div>
-        </div>
-    </footer>
-    </div>
-  </section>
-   <section class="main__wrapper">
-     <div class="contact__page">
-     <header class="title__page">
-       <h1 class="Title">Contact</h1>
-     </header>
-     <main class="page__content">
-       <div class="contact__info">
-         <h2 class="heading">Get in <span class="highlight">Touch</span></h2>
-         <iframe width="451" height="200" frameborder="0" style="border:0"
-           src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJSyUHXNRC1moRbf8lt-Jjy-o&key=AIzaSyCO_ZRzs_5cZ63Etv5FLDk5tXC4tKuamt0"
-           allowfullscreen></iframe>
-         <div class="info__detail">
-           <div class="icon__container">
-           <i class="fas fa-map-marker-alt info-icon"></i></div>
-           <p class="detail"> Melbourne, Australia
-           </p>
-         </div>
-         <div class="info__detail">
-           <div class="icon__container">
-            <i class="fas fa-envelope info-icon"></i></div>
-           <p class="detail">jackytsheng@gmail.com
-           </p>
-         </div>
-         <div class="info__detail">
-           <div class="icon__container">
-           <i class="fas fa-phone info-icon"></i></div>
-           <p class="detail">+61 400 000 000
-           </p>
-         </div>
-         <div class="info__detail">
-           <div class="icon__container">
-           <i class="fas fa-check info-icon"></i></div>
-           <p class="detail">Freelance Available
-           </p>
-         </div>
-       </div>
-       <div class="contact__form">
-        <h2 class="heading">Contact <span class="highlight">Form</span></h2>
-          <head>
-            <title>reCAPTCHA demo: Simple page</title>
-            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-          </head>
-            <form action="?" method="POST" id="contactForm">
-              <div class="input__bar">
-                <span class="underline__focus"></span>
-                <div class="square__container icon-holder"><i
-                    class="fas fa-user contact-icon"></i></div>
-                <label for="full-name"><i class="info__heading info__Name">Full Name</i></label>
-                <input id="full-name" type="text" required>
-               </div>
-              <div class="input__bar">
-                <span class="underline__focus"></span>
-               <div class="square__container icon-holder"><i class="fas fa-envelope contact-icon email__icon"></i>
-               </div>
-               <label for="email"><i class="info__heading info__email">Email Address</i></label>
-               <input id="email" type="email" required>
-               </div>
-               <div class="input__message input__bar">
-                 <span class="underline__focus"></span>
-                <div class="message__icon-holder icon-holder"><i
-                    class="fas fa-comment contact-icon message__icon"></i></div>
-                <label for="contactMessages"><i class="info__heading info__message">Messages</i></label>
-               <textarea name="message" id="contactMessages" cols="auto" rows="10" form="contactForm"></textarea>
-               </div>
-              <div class="g-recaptcha" data-sitekey="6LfOiu4UAAAAAMF8IeuVgPXKEp44CjlFEOSuvnuh"></div>
-              <button class="submit-btn" type="submit">SEND MESSAGE</button>
-            </form>
-       </div>
-     </main>
-     </div>
-   </section>
- 
+    <div class="swiper-pagination"></div>
+  </div>
 </body>
-  <footer class="bottom__footer">
-    <p> © 2020 All right reserved. Created by <span class="highlight"> Jiajin Zheng</span>. Designed by <span
-        class="highlight">Jiangren</span>.</p>
-  </footer>
-  <script src="nav-control.js"></script>
-  <script src="form.js"></script>
+<footer class="bottom__footer">
+  <p> © 2020 All right reserved. Created by <span class="highlight"> Jiajin Zheng</span>. Designed by <span
+      class="highlight">Jiangren</span>.</p>
+</footer>
+<script src="nav-control.js"></script>
+<script src="form.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    allowTouchMove:false,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+    return '<span class="' + className + '">' + (index + 1) + '</span>';
+    }
+  }});
+</script>
+
 </html>

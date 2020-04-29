@@ -3,13 +3,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  &:hover .card__container{
-    transform: rotateY(-90deg) translateY(200px);
-    transform-origin: 50% 50% -600px;
-  }
   .card__container {
-    transform: rotateY(0deg);
-    transition: transform 0.5s;
     .card {
       width: $cardWidth;
       background-color: white;
@@ -122,7 +116,7 @@
             &:hover {
               color: $lightText;
               cursor: pointer;
-              transition: color 0.4s ease-in;
+              transition: color 0.1s ease-in;
             }
           }
         }

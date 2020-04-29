@@ -20,11 +20,17 @@ FullName.onfocus = ()=>{
   inputBar[0].style.right= "0";
 };
 FullName.onblur = ()=>{
-  FullNameIcon.style.color = "";
-  FullNameText.style.transform = "";
-  FullNameText.style.fontSize = "";
-  inputBar[0].style.left = "50%";
-  inputBar[0].style.right = "50%";
+  if(FullName.value !==""){
+    FullNameText.innerHTML="";
+  }else{
+    FullNameText.innerHTML = "Full Name";
+    FullNameText.style.transform = "";
+    FullNameText.style.fontSize = "";
+  }
+   FullNameIcon.style.color = "";
+   inputBar[0].style.left = "50%";
+   inputBar[0].style.right = "50%";
+ 
 };
 
 email.onfocus = () => {
@@ -35,9 +41,14 @@ email.onfocus = () => {
   inputBar[1].style.right = "0";
 };
 email.onblur = () => {
+  if (email.value !== "") {
+    emailText.innerHTML = "";
+  } else {
+    emailText.innerHTML = "Email Address";
+    emailText.style.transform = "";
+    emailText.style.fontSize = "";
+  }
   emailIcon.style.color = "";
-  emailText.style.transform = "";
-  emailText.style.fontSize = "";
   inputBar[1].style.left = "50%";
   inputBar[1].style.right = "50%";
 };
@@ -51,9 +62,15 @@ message.onfocus = () => {
 };
 
 message.onblur = () => {
+
+   if (message.value !== "") {
+     messageText.innerHTML = "";
+   } else {
+     messageText.innerHTML = "Messages";
+     messageText.style.transform = "";
+     messageText.style.fontSize = "";
+   }
   messageIcon.style.color = "";
-  messageText.style.transform = "";
-  messageText.style.fontSize = "";
   inputBar[2].style.left = "";
   inputBar[2].style.right = "";
 };
