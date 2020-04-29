@@ -11,33 +11,37 @@
   <link rel="icon" href="img/JZ-favicon.ico" sizes="16x16">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-
   <script src="https://unpkg.com/swiper/js/swiper.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
 </head>
 
 
-<nav class="nav">
-  <div class="nav__container">
-    <div class="nav__name">Jacky <span class="highlight">Zheng</span></div>
-    <div class="nav__content">
-      <div class="nav__content__link__container">
-        <a class="nav__content__link nav__content__home nav__content__link--selected" href="#home">Home</a></div>
-      <div class="nav__content__link__container">
-        <a class="nav__content__link nav__content__resume" href="#resume">Resume</a></div>
-      <div class="nav__content__link__container">
-        <a class="nav__content__link nav__content__services" href="#services">Services</a></div>
-      <div class="nav__content__link__container">
-        <a class="nav__content__link nav__content__blog" href="#blog">Blog</a></div>
-      <div class="nav__content__link__container">
-        <a class="nav__content__link nav__content__contact" href="#contact">Contact</a></div>
-    </div>
-  </div>
-</nav>
 
 <body>
-  <div class="swiper-container">
+  <div class="loader" id="load">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class="nav">
+    <div class="nav__container">
+      <div class="nav__name">Jacky <span class="highlight">Zheng</span></div>
+      <div class="nav__content">
+        <div class="nav__content__link__container">
+          <a class="nav__content__link nav__content__home nav__content__link--selected" href="#home">Home</a></div>
+        <div class="nav__content__link__container">
+          <a class="nav__content__link nav__content__resume" href="#resume">Resume</a></div>
+        <div class="nav__content__link__container">
+          <a class="nav__content__link nav__content__services" href="#services">Services</a></div>
+        <div class="nav__content__link__container">
+          <a class="nav__content__link nav__content__blog" href="#blog">Blog</a></div>
+        <div class="nav__content__link__container">
+          <a class="nav__content__link nav__content__contact" href="#contact">Contact</a></div>
+      </div>
+    </div>
+  </nav>
+  <div class="swiper-container" id="main__content">
     <div class="swiper-wrapper">
       <section class="Home__page main__wrapper swiper-slide">
         <div class="card__container">
@@ -328,6 +332,7 @@
     </div>
     <div class="swiper-pagination"></div>
   </div>
+  
 </body>
 <footer class="bottom__footer">
   <p> © 2020 All right reserved. Created by <span class="highlight"> Jiajin Zheng</span>. Designed by <span
@@ -335,6 +340,7 @@
 </footer>
 <script src="nav-control.js"></script>
 <script src="form.js"></script>
+<script src="loading.js"></script>
 <script>
   var mySwiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
