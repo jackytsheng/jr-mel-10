@@ -13,30 +13,46 @@
     text-align: center;
     font-family: 'Baloo Paaji 2', cursive;
     }
+    .question__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .question{
+        width:500px;
+    }
 </style>
 <body>
+    <section class="question__container">
     <p>
     Q1 call "flightStop() " in the console
+    <pre><code class="language-js">document.querySelectorAll('textarea').forEach(el => {
+  el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');
+  el.classList.add('auto');
+  el.addEventListener('input', e => {
+    el.style.height = 'auto';
+    el.style.height = (el.scrollHeight) + 'px';
+  });
+});</code></pre>
     </p>
-    <p>
-    Q2 call "taxCal() " in the console
-    </p>
+    
+    <div class="question">
+        <p>
+            Q2 call "taxCal() " in the console
+        </p>
+        <div class="question__response">
+    <iframe height="450" style="width: 100%;" scrolling="no" title="Set time out test"
+        src="https://codepen.io/jackytsheng/embed/NWqZoRB?height=265&theme-id=dark&default-tab=js"
+        frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+        See the Pen <a href='https://codepen.io/jackytsheng/pen/NWqZoRB'>Set time out test</a> by jackytsheng
+        (<a href='https://codepen.io/jackytsheng'>@jackytsheng</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
+    </div>
+    </div>
+    </section>
 </body>
 
 <script>
     flightStop = (array) => array.length==1?"direct": array.length==2?"1 stop":`${array.length -1} stops`
-    taxCal=(money)=>{
-        if(money<=18200){
-            return 0;
-        }else if (money<=37000){
-            return (money - 18201)*0.19;
-        }else if (money<=90000){ 
-            return (money - 37001)*0.325+3572;
-        }else if (money<=180000){ 
-            return (money - 90001)*0.37+20797;
-        }else if (money>180001){ 
-            return (money - 180001)*0.45+54096;
-        }
-    }
 </script>
 </html>
