@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 200px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .form {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 2px 2px #ccc;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  input {
+    height: 30px;
+  }
+
+  input:focus{
+    outline: 0;
+    border:solid 1px black;
+  }
+  .name__error {
+    border: solid 1px red;
+    position: relative;
+  }
+  .name__error__message{
+    
+  }
+
+  .name__error__message--active{
+    display:block;
+  }
+
+  .name__correct {
+    border: solid 1px green;
+  }
+
+  #name {
+    transition: border 0.2s;
+  }
+</style>
+
+<body>
+  <section class="wrapper">
+    <form class="form">
+      <h2>Register with us</h2>
+      <div class="name__container container">
+        <label for="name"> User name </label>
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <small class="name__error__message">
+        </small>
+      </div>
+      <div class="email__container container">
+        <label for="email"> Email </label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+      </div>
+      <div class="password__container container">
+        <label for="password"> Password </label>
+        <input type="password" name="password" id="password" placeholder="Enter your password">
+      </div>
+      <div class="password-confirmed__container container">
+        <label for="password"> Confirm password </label>
+        <input type="password" name="confirm__password" id="confirm__password" placeholder="Confirm your password">
+      </div>
+      <div class="submit container">
+        <input type="submit" name="submit" id="submit">
+      </div>
+    </form>
+  </section>
+</body>
+<script>
+  const userName = document.querySelector("#name");
+  const form = document.querySelector(".form");
+  form.onsubmit = (evt) => {
+    if (userName.value === "" && userName.value.length <= 3) {
+      evt.preventDefault();
+      console.log("error");
+      userName.classList.remove("name__correct");
+      userName.classList.add("name__error");
+    } else {
+      evt.preventDefault();
+      userName.classList.remove("name__error");
+      userName.classList.add("name__correct");
+    }
+  }
+</script>
+
+</html>
