@@ -15,31 +15,55 @@
     }
     .question__container{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items:flex-start;
+        justify-content:  space-around;
+        flex-wrap: wrap;
     }
     .question{
         width:500px;
     }
+    .img__container{
+        width: 530px;
+        height:230px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px 3px #ccc;
+    }
+    .img__container img{
+        position: absolute;
+        left:0;
+    }
+    .question__flight__stop{
+        width: 560px
+    }
 </style>
 <body>
     <section class="question__container">
-    <p>
-    Q1 call "flightStop() " in the console
-    <pre><code class="language-js">document.querySelectorAll('textarea').forEach(el => {
-  el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');
-  el.classList.add('auto');
-  el.addEventListener('input', e => {
-    el.style.height = 'auto';
-    el.style.height = (el.scrollHeight) + 'px';
-  });
-});</code></pre>
-    </p>
-    
-    <div class="question">
-        <p>
-            Q2 call "taxCal() " in the console
-        </p>
+        <div class="question__holder">
+            <div class="question__description ">
+                <figure class="img__container question__flight__stop">
+                    <p>Q1 Flight Stop</p>
+                    <img src="img/flight user story.png" alt="">
+                </figure>
+            </div>
+            <div class="question__response">
+                <iframe height="439" style="width: 100%;" scrolling="no" title="Flight Stop Js"
+                    src="https://codepen.io/jackytsheng/embed/OJyxzMm?height=439&theme-id=dark&default-tab=js"
+                    frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
+                    See the Pen <a href='https://codepen.io/jackytsheng/pen/OJyxzMm'>Flight Stop Js</a> by jackytsheng
+                    (<a href='https://codepen.io/jackytsheng'>@jackytsheng</a>) on <a
+                        href='https://codepen.io'>CodePen</a>.
+                </iframe>
+            </div>
+        </div>
+    <div class="question__holder">
+        <div class="question__description">
+            <figure class="img__container">
+                <p>Q2 Tax calculator</p>
+                <img src="img/tax calculator.png" alt="">
+            </figure>
+        </div>
         <div class="question__response">
         <iframe height="880" style="width: 100%;" scrolling="no" title="Tax calculator"
             src="https://codepen.io/jackytsheng/embed/NWqZoRB?height=880&theme-id=dark&default-tab=js" frameborder="no"
@@ -53,6 +77,6 @@
 </body>
 
 <script>
-    flightStop = (array) => array.length==1?"direct": array.length==2?"1 stop":`${array.length -1} stops`
+    
 </script>
 </html>
