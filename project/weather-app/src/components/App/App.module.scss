@@ -1,6 +1,11 @@
+@import './variable';
 
 * { 
   box-sizing: border-box;
+}
+body{
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
 }
 
 .wrapper{
@@ -9,5 +14,6 @@
   align-items: center;
   position: relative;
   height:100vh;
+  background-color: $theme-background;
 }
 

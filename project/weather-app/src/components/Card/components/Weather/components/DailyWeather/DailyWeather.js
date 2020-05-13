@@ -1,32 +1,28 @@
 import React from 'react';
 import styles from './DailyWeather.module.scss';
-import classNames from 'classnames';
+import Icon from './components/Icon';
+import classNames from 'classnames/bind';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThermometerHalf } from "@fortawesome/free-solid-svg-icons";
 
-class DailyWeather extends React.Component{
-  constructor(props){
-    super(props);
-    this.state ={
-      tempMax: "10",
-      tempMin: "10",
-    }
-  }
-  render(){
-  const currentLocation ="heathmont,melbourne";
-  const adr = `http://api.openweathermap.org/data/2.5/weather?q=${currentLocation}&appid=59f50906ffa57b3737627dd27793aedc&units=metric`;
-  let weatherData = {};
-  
-  // fetch(adr)
-  // .then((response) => response.json())
-  // .then((data) => {
-  //   this.setState({tempMax:data.main.temp_max})
-  // });
+const cx = classNames.bind(styles);
 
+const DailyWeather =(props)=>{
   return (
-    <div className={styles.weatherBox}>
-      {this.state.tempMax}
+    <div className={cx(styles.weatherBox, props.className)}>
+      <div className={cx(styles.day)}>{props.Date}</div>
+      <Icon href={props.href} />
+      <div className={styles.temperature}>
+        <div className={styles.icon}>
+          <FontAwesomeIcon icon={faThermometerHalf} />
+        </div>
+        <div className={styles.value}>
+          <p>{props.temp[0] + "℃"}</p>
+          <p>{props.temp[1] + "℃"}</p>
+        </div>
+      </div>
     </div>
   );
-}
 }
 
 

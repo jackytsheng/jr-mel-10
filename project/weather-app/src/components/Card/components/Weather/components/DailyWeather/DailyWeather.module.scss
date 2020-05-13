@@ -1,12 +1,61 @@
-.wrapper{
-  background-color: black;
-}
+@import './../../../../../App/variable';
+
+
 .weatherBox{
-  width: 50px;
-  height:50px;
+  padding:5px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  border:solid 1px black;
+  border-right:solid 1px $dark-color;
+}
+.today{
+  background-color: $very-light-color;
+  color:$dark-color;
+  .day{
+    background-color: $white-color;
+    color: $dark-color;
+  }
+  .temperature{
+    .icon{
+      color: $white-color;
+    }
+    color:$white-color;
+  }
+}
+.day{
+  padding:5px;
+  border-radius: 5px;
+  width:100%;
+  text-align: center;
+  margin-bottom: 5px;
+  color: $white-color;
+  font-weight: 600;
+  background-color: $very-light-color;
+}
+.last{
+  border-right:none;
+}
+.temperature{
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 12px;
+  color: $dark-color;
+  .icon{
+    padding-right: 5px;
+    color: $light-color;
+    font-size: 20px;
+  }
+  .value{
+   display: flex;
+   flex-direction: column; 
+    p{
+      font-weight: 600;
+    font-size: 15px;
+    margin:0;
+   }
+  }
 }

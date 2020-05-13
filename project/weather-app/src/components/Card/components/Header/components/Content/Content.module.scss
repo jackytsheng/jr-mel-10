@@ -1,6 +1,29 @@
+@import './../../../../../App/variable';
 .wrapper{
   width:600px;
   height:265px;
-  border: solid 2px black;
   border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+ box-shadow: 3px 4px 11px 0px rgba(0,0,0,0.33);
+  figure{
+    margin:0;
+    img{
+      object-fit: cover;
+      object-position: -10px -20px;
+    }
+  }
+}
+.location{
+  font-weight: 600;
+  left:10%;
+  top:10%;
+  color: $dark-color;
+  position: absolute;
+}
+.logo{
+  position: absolute;
+  left:20px;
+  top:40px;
+  width:100px;
 }

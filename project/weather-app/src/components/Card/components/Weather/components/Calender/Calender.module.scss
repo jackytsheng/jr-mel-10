@@ -1,0 +1,74 @@
+@import './../../../../../App/variable';
+.wrapper{
+  padding-left:40px;
+  height: 100%;
+  border-radius: 30px;
+  flex:1;
+}
+
+main {
+  line-height: 1.8;
+  padding: 0 5px;
+  height: 100%;
+  background-color: $white-color;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.75)
+}
+// For the month
+.month-indicator {
+  color:$dark-color;
+  text-align: center;
+  font-weight: 600;
+}
+
+// CSS grid used for the dates
+.day-of-week,
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+// Styles for the weekday/weekend header
+.day-of-week {
+
+}
+
+.day-of-week > * {
+  font-size: 0.8em;
+  color: $light-color;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+/* Dates */
+.date-grid {
+}
+
+/* Positioning the first day */
+.date-grid button:first-child {
+  grid-column: 4;
+}
+
+// Style for each day
+.date-grid button {
+  position: relative;
+  font-size: 0.7em;
+  font-weight: 600;
+  border-radius: 10%;
+  border: 0;
+  background-color: transparent;
+  color: $light-color;
+}
+
+.date-grid button:hover,
+.date-grid button:focus {
+  outline: none;
+  background-color:$very-light-color;
+  color: $white-color;
+}
+.date-grid .today{
+  box-sizing: content-box;
+  border:solid 2px $dark-color;
+}
