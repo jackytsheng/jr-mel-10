@@ -1,0 +1,47 @@
+@import './../../../../../../../App/variable';
+
+.wrapper{
+  display:block;
+  cursor: pointer;
+  height:60px;
+  border-radius: 22px;
+  border: dotted 2px $dark-color; 
+  margin-bottom: 10px;
+  position: relative;
+   user-select: none;
+  &:hover .plane{
+    left:90%;
+  }
+}
+.plus{
+  width: 60px;
+  height:100%;
+  font-size: 30px;
+  color: $light-color;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.plane,.map{
+  position: absolute;
+  font-size: 30px;
+  color: $dark-color;
+}
+.plane{
+  transform: rotateZ(60deg);
+  left:0;
+  top:-20px;
+  transition: left 0.6s;
+}
+.text{
+  position: absolute;
+  color: $dark-color;
+  font-weight: 600;
+  right:10px;
+  top:20px;
+}
+.map{
+  top:35px;
+  right:0;
+}

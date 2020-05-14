@@ -10,10 +10,16 @@ body{
 
 .wrapper{
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   height:100vh;
   background-color: $theme-background;
+
+  footer{
+    font-size: 15px;
+    color:$light-color;
+  }
 }
 

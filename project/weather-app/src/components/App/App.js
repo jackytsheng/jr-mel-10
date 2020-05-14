@@ -7,6 +7,7 @@ import Card from "../Card";
   return (
     <div className={styles.wrapper}>
       <Card />
+      <footer> © Designed and created by Jiajin, 2020 </footer>
     </div>
   );
  };

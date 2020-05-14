@@ -1,8 +1,10 @@
 .wrapper{
   border-radius: 20%;
-  height:265px;
+  height:280px;
   width:200px;
   position: relative;
   top:-265px;
   left: 635px;
+  display:flex;
+  flex-direction: column;
 }

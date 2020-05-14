@@ -1,18 +1,111 @@
 @import './../../../../../../../App/variable';
-
 .wrapper{
-  display:block;
+  display:flex;
+  position: relative;
   cursor: pointer;
   height:60px;
   border-radius: 22px;
-  border: dotted 2px $dark-color; 
+  border: solid 2px $dark-color; 
+  margin-bottom: 10px;
+  overflow: hidden;
+  user-select: none;
+  animation: bounceIn;
+  animation-duration: 0.8s;
+  &:hover {
+    animation: shakeX;
+    animation-duration: 1s;
+  }
 }
 .icon{
-  width: 60px;
+  width: 50px;
+  background-color: $very-light-color;
   height:100%;
-  font-size: 30px;
+  font-size: 18px;
   color: $dark-color;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items:center;
+}
+.textField{
+  padding-top: 3px;
+  display: inline-flex;
+  flex:1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color:$dark-color;
+  font-weight: 600;
+  .weather{
+    font-size: 10px;
+  }
+}
+
+
+@keyframes shakeX {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-3px, 0, 0);
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(3px, 0, 0);
+    transform: translate3d(3px, 0, 0);
+  }
+}
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
