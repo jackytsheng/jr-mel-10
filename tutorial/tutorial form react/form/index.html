@@ -11,10 +11,15 @@
     box-sizing: border-box;
   }
 
+  :root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+  }
+
   body {
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 200px;
-    
+
   }
 
   .wrapper {
@@ -26,7 +31,7 @@
 
   .form {
     width: 300px;
-    height: 400px;
+    height: 480px;
     border-radius: 10px;
     padding: 30px;
     display: flex;
@@ -39,51 +44,59 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    position:relative;
-    color:rgb(89, 89, 89);
+    position: relative;
+    color: rgb(89, 89, 89);
     padding-bottom: 20px;
     margin-bottom: 10px;
   }
 
   h2 {
-    margin: 0;
+    margin: 0 auto 20px;
   }
 
   input {
     height: 30px;
   }
 
-  input:focus{
+  input:focus {
     outline: 0;
-    border:solid 1px black;
+    border: solid 1px black;
   }
 
-  .name__error__message{
-    position:absolute;
-    bottom:0;
-    left:10px;
-    color:red;
+  .name__error__message {
+    font-size:12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--error-color);
     visibility: hidden;
   }
-  .error{
-    border: solid 1px red;
+
+  .error input {
+    border: solid 1px var(--error-color);
     visibility: visible;
   }
-  .success {
-    border: solid 1px green;
+
+  .error .name__error__message {
+    visibility: visible;
   }
 
-  #submit{
-    cursor:pointer;
+  .success input {
+    border: solid 1px var(--success-color);
+    outline: none
+  }
+
+  #submit {
+    cursor: pointer;
     background-color: #3498db;
-    border:2px solid #3498db;
-    border-radius:4px;
-    color:#fff;
-    display:block;
-    font-size:1em;
-    padding:5px;
-    margin-top:20;
-    width:100%;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 1em;
+    padding: 5px;
+    margin-top: 20;
+    width: 100%;
   }
 </style>
 
@@ -99,7 +112,7 @@
       </div>
       <div class="email__container container">
         <label for="email"> Email </label>
-        <input type="email" name="email" id="email" placeholder="Enter your email">
+        <input type="text" name="email" id="email" placeholder="Enter your email">
         <small class="name__error__message">Error Message
         </small>
       </div>
@@ -127,33 +140,62 @@
   const email = document.querySelector("#email");
   const password = document.querySelector("#password");
   const confirmedPassword = document.querySelector("#confirm__password");
- 
-  const showSuccess = (input) =>{
-    input.classList.add("success");
+
+  const showSuccess = (input) => {
+    input.parentElement.classList.remove("error");
+    input.parentElement.classList.add("success");
   }
-  const showError = (input,message) => {
-    input.classList.remove("success");
-    input.classList.add("error");
-    input.innerText = message;
+  const showError = (input, message) => {
+    input.parentElement.classList.remove("success");
+    input.parentElement.classList.add("error");
+    input.parentElement.lastElementChild.innerText = message;
   }
 
+  const getFieldName=(input)=>(
+    input.parentElement.firstElementChild.innerText
+  )
+  const checkLength = (input, min, max) => {
+    if (input.value.length < min ) {
+      showError(input, `${getFieldName(input)} must be at least ${min} characters.`);
+      console.log(input);
+    } else if (input.value.length > max){
+      showError(input, `${getFieldName(input)} must be less than ${max} characters.`);
+    } else{
+      showSuccess(input);
+    }
+  }
   const checkRequired = (inputArr) => {
     inputArr.forEach(input => {
-      if (input.value === "") {
-        showError(input,"There is an error");
-        console.log("error");
-
+      if (input.value.trim() === "") {
+        showError(input, "This field is required");
       } else {
         showSuccess(input);
       }
     });
-     
+
+  }
+  const checkEmail=(email)=>{
+    const regex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+    if(regex.test(email.value.trim())){
+      showSuccess(email);
+    }else{
+      showError(email,`${getFieldName(email)} is invalid`);
+    }
+  }
+  const checkMatchPassword = (password1,password2)=>{
+    if(password1.value!==password2.value){
+      showError(password2,"Password doesn't match");
+    }else{
+      showSuccess;
+    }
   }
   form.onsubmit = (evt) => {
-      evt.preventDefault();
-
-      checkRequired([userName,email,password,confirmedPassword]);
-   
+    evt.preventDefault();
+    checkRequired([userName, email, password, confirmedPassword]);
+    checkLength(userName, 3, 15);
+    checkLength(password, 6, 25);
+    checkEmail(email);
+    checkMatchPassword(password,confirmedPassword);
   }
 </script>
 
