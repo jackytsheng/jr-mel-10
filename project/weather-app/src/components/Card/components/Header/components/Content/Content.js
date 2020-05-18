@@ -3,13 +3,15 @@ import styles from "./Content.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMapMarkerAlt} from "@fortawesome/free-solid-svg-icons";
 import Au from './img/au.svg';
+import {useSelector} from 'react-redux';
 
 const Content = () => {
+  const location = useSelector(state => state.location );
   return (
     <div className={styles.wrapper}>
       <div className={styles.location}>
         <FontAwesomeIcon icon={faMapMarkerAlt} />
-        <div className={styles.place}>Melbourne,Australia</div>
+        <div className={styles.place}> {location?location[0].toUpperCase()+ location.slice(1).toLowerCase():""} </div>
         <img className={styles.logo} src={Au} />
       </div>
       <figure>

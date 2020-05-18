@@ -9,12 +9,12 @@ import { changeLocation,typing } from './action';
 
 const Search =(props) => {
     const location = useSelector((state) => state.word);
+    const newLocation = useSelector(state=>state.location);
     const dispatch = useDispatch();
     return (
       <form
         className={styles.wrapper}
-        onSubmit={(event) => dispatch(changeLocation(event, location))}
-      >
+        onSubmit={(event) => dispatch(changeLocation(event, location))}>
         <div className={styles.field}>
           <input
             type="text"

@@ -1,9 +1,9 @@
 export const changeLocation = (event,location) => {
   event.preventDefault();
-  return{
-    type:"CHANGE",
-    payload:location,
-  }
+    return {
+      type: "CHANGE",
+      payload: location,
+    };
 }
 
 export const typing = (event) => {

@@ -9,8 +9,8 @@ const cx = classNames.bind(styles);
 
 const DailyWeather =(props)=>{
   return (
-    <div className={cx(styles.weatherBox, props.className)}>
-      <div className={cx(styles.day)}>{props.Date}</div>
+    <div className={cx("weatherBox", props.className,{"last":props.last})}>
+      <div className={cx("day")}>{props.Date}</div>
       <Icon href={props.href} />
       <div className={styles.temperature}>
         <div className={styles.icon}>

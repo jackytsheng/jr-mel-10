@@ -62,11 +62,12 @@ main {
   color: $light-color;
 }
 
-.date-grid button:hover,
-.date-grid button:focus {
-  outline: none;
+.date-grid button:hover{
   background-color:$very-light-color;
   color: $white-color;
+}
+.date-grid button:focus {
+  outline: none;
 }
 .date-grid .today{
   box-sizing: content-box;
