@@ -2,7 +2,6 @@
 .wrapper{
   padding-left:40px;
   height: 100%;
-  border-radius: 30px;
   flex:1;
 }
 
@@ -11,7 +10,7 @@ main {
   padding: 0 5px;
   height: 100%;
   background-color: $white-color;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.75)
 }
 // For the month
@@ -48,13 +47,13 @@ main {
 
 /* Positioning the first day */
 .date-grid button:first-child {
-  grid-column: 4;
+  grid-column: 0;
 }
 
 // Style for each day
 .date-grid button {
   position: relative;
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 600;
   border-radius: 10%;
   border: 0;
@@ -65,6 +64,9 @@ main {
 .date-grid button:hover{
   background-color:$very-light-color;
   color: $white-color;
+}
+.date-grid .filler:hover{
+  background-color:$white-color;
 }
 .date-grid button:focus {
   outline: none;

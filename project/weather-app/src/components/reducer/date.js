@@ -3,7 +3,7 @@ let date = new Date();
 let today = date.getDay();
 let todate = date.getDate();
 // Jan: 1, Dec: 12
-let month = date.getMonth() + 1;
+let month = date.getMonth();
 let year = date.getFullYear();
 
 // no action needed
