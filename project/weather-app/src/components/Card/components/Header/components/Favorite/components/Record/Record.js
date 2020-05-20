@@ -15,7 +15,7 @@ const Record =(props)=>{
         <div className={styles.temp}>
           {props.temp[1] + "℃" + " / " + props.temp[0] + "℃"}
         </div>
-        <div className={styles.weather}>{"Item Key:"+props.weather}</div>
+        <div className={styles.weather}>{props.weather.toUpperCase()}</div>
       </div>
     </a>
   );

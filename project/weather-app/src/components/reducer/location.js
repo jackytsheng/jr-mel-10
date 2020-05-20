@@ -1,5 +1,5 @@
 const locationReducer = (state = "melbourne",action) => {
-  switch(action.type){
+  switch (action.type) {
     case "CHANGE":
       return action.payload;
     default:

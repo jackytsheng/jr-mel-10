@@ -2,41 +2,20 @@ import React from "react";
 import styles from "./Favorite.module.scss";
 import Record from "./components/Record";
 import Control from './components/Control';
+import {connect} from 'react-redux';
+import {saveLocation,deleteLocation } from './action';
+
 
 class Favorite extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
-      itemCount:0,
-      list:[],
-    }
-  }
-  addItem(location,tempMax,tempMin,weather){
-    if(this.state.itemCount >= 4){
-      return;
-    }
-    const list = [...this.state.list];
-      list.unshift({
-        location,
-        tempMax,
-        tempMin,
-        weather,
-        id:JSON.stringify(Date.now()),
-      })
-    this.setState({list, itemCount:list.length});
-  }
-  removeItem(id){
-    const list = [...this.state.list];
-    const newList = list.filter(item => item.id !== id);
-    // console.log(list);
-    this.setState({ list:newList, itemCount: list.length });
-  }
+  
   renderItem(){
-    const list = [...this.state.list];
-    const removeItem = this.removeItem.bind(this);
+    const list = this.props.renderList;
+    const dispatch = this.props.dispatch;
+ 
+    
     const renderItem = list.map((item) => (
       <Record
-        onClick={() => removeItem(item.id)}
+        onClick={() => dispatch(deleteLocation(item.id))}
         location={item.location}
         temp={[item.tempMin, item.tempMax]}
         weather={item.weather}
@@ -46,16 +25,31 @@ class Favorite extends React.Component {
     return renderItem;
   }
   render(){
-    const addItem = this.addItem.bind(this);
-    
-    const itemId=this.state.itemCount;
+    const dispatch = this.props.dispatch;
+    const location = this.props.location;
+    const length = this.props.renderList.length;
+    const Weather = this.props.weather;
+    const date = new Date();
+    const todayWeather = Weather[date.getDay()];
+    const { tempMin, tempMax, weather } = todayWeather;
   return (
     <div className={styles.wrapper}>
-      <Control onClick={() => addItem("melbourne", 5, 7.22, Date.now(), 0)} />
+      <Control
+        onClick={() =>
+          length < 4
+            ? dispatch(saveLocation(location, tempMin, tempMax, weather))
+            : undefined
+        }
+      />
       {this.renderItem()}
     </div>
   );
 }
 };
+const mapStateToProps = (state) => ({
+    renderList : state.favourite,
+    location : state.location,
+    weather: state.weather,
+  });
 
-export default Favorite;
+export default connect( mapStateToProps)(Favorite);
