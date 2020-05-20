@@ -1,5 +1,5 @@
 
-export const updateWeater = (tempMax, tempMin, weather) => {
+export const updateWeather = (tempMin, tempMax, weather) => {
          return {
            type: "UPDATE",
            payload: {
