@@ -17,45 +17,7 @@ const weatherIcon = {
   rainy: "rainy",
 };
 
-
-
 const Weather = () => {
-// const [weatherState, setWeatherState] = useState({
-//   tempMax: 0,
-//   tempMin: 0,
-//   weather: "cloudy",
-// });
-// const currentLocation = useSelector((state) => state.location.toLowerCase());
-// const dispatch = useDispatch();
-
-// const adr = `http://api.openweathermap.org/data/2.5/weather?q=${currentLocation}&appid=59f50906ffa57b3737627dd27793aedc&units=metric`;
-// let weatherData = {};
-
-//   const getData = async () => {
-//     let res = await fetch(
-//       `https://community-open-weather-map.p.rapidapi.com/weather?&units=metric&q=${currentLocation}`,
-//       {
-//         method: "GET",
-//         headers: {
-//           "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-//           "x-rapidapi-key":
-//             "e5c291fe26mshbc022f74aa64e54p14f06djsnb50329cc398f",
-//         },
-//       }
-//     ).catch((err) => {
-//       console.log(err);
-//     });
-//     res.json().then(
-//       (data) => {console.log(data.main)}
-//                 //   dispatch(updateWeather(
-//                 //         data.main.temp_min,
-//                 //         data.main.temp_max,
-//                 //         data.weather[0].main
-//                 //       )):console.log(undefined)
-//                 // }
-//     );
-//   }
-//   getData();  
   const today = useSelector((state) => state.date.today);
   const weather = useSelector((state) => state.weather);
   
