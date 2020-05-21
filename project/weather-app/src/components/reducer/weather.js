@@ -1,39 +1,39 @@
-
+ 
 const initialState = [
   {
-    tempMax: 0,
-    tempMin: 0,
-    weather: "Cloudy",
+    tempMax: 20.3,
+    tempMin: 13.5,
+    weather: "Clear",
   },
   {
-    tempMax: 0,
-    tempMin: 0,
-    weather: "Cloudy",
+    tempMax: 12.5,
+    tempMin: 5,
+    weather: "Clouds",
   },
   {
-    tempMax: 0,
-    tempMin: 0,
-    weather: "Cloudy",
+    tempMax: 12.3,
+    tempMin: 4.7,
+    weather: "Rain",
   },
   {
-    tempMax: 3,
-    tempMin: -1,
-    weather: "Cloudy",
+    tempMax: 15.4,
+    tempMin: 6.3,
+    weather: "Snow",
   },
   {
-    tempMax: 0,
-    tempMin: 0,
-    weather: "Cloudy",
+    tempMax: 23.5,
+    tempMin: 13.4,
+    weather: "Drizzle",
   },
   {
-    tempMax: 0,
-    tempMin: 0,
-    weather: "Cloudy",
+    tempMax: 14,
+    tempMin: 9,
+    weather: "Thunderstorm",
   },
   {
-    tempMax: 0,
-    tempMin: 0,
-    weather: "Cloudy",
+    tempMax: 15,
+    tempMin: 10,
+    weather: "Clear",
   },
 ];
 

@@ -1,15 +1,28 @@
 import React from 'react';
 import styles from './App.module.scss';
+import { connect } from 'react-redux';
+import { updateWeather,updateImg } from "./action";
 import Card from "../Card";
 
 
- const App= () => {
+class App extends React.Component {
+  componentWillMount(){
+    this.props.updateWeather(this.props.location);
+    this.props.updateImg(this.props.location);
+  }
+
+  render(){
   return (
     <div className={styles.wrapper}>
       <Card />
-      <footer> © Designed and created by Jiajin, 2020 </footer>
+      <footer> © Designed and created by Jiajin Zheng 2020 </footer>
     </div>
   );
+}
  };
 
-export default App;
+ const mapStateToProps = state => ({
+   location: state.location,
+ })
+
+export default connect(mapStateToProps, {updateWeather,updateImg})(App);

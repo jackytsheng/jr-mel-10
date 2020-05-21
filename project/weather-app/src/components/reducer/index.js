@@ -3,6 +3,7 @@ import typingReducer from './typing';
 import dateReducer from './date';
 import favouriteLocationReducer from './favouriteLocation';
 import weatherReducer from './weather';
+import imgReducer from './img';
 import {combineReducers} from 'redux';
 
 const allReducers = combineReducers({
@@ -11,6 +12,7 @@ const allReducers = combineReducers({
   word: typingReducer,
   date: dateReducer,
   weather: weatherReducer,
+  imgLink: imgReducer,
 });
 
 export default allReducers;
